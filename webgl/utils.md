@@ -26,6 +26,7 @@ vec3 hlight = mix(h_ground, h_sky, 1. - dot(h_dir, v_normal));
 vec4 transformed = modelViewMatrix * vec4(position, 1.0) || gl_Position;
 v_view = normalize(- transformed.xyz);
 v_normal = normal;
+
 // (FRAGMENT)
 vec3 x = normalize( vec3(v_view.z, 0., -v_view.x));
 vec3 y = cross(v_view, x);
@@ -55,4 +56,12 @@ vec3 b = vec3(0.5, 0.5, 0.5);
 vec3 c = vec3(1.0, 1.0, 1.0);
 vec3 d = vec3(0.00, 0.33, 0.67);
 vec3 finalMovingGradient = a + b _ cos(6.28 _ (c * diff + d + uTime*10.));
+```
+
+## Noises
+
+### 3pt simplex
+
+```glsl
+
 ```

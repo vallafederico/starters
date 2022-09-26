@@ -20,7 +20,10 @@ Three Js
 
 ```JavaScript
 degit vallafederico/starters/webgl/three/
+```
 
+```JavaScript
+degit vallafederico/starters/webgl/three/src/gl
 ```
 
 Ogl

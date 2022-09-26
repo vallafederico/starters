@@ -6,6 +6,6 @@
 
 #### Basis THREEjs
 
-```node
-degit;
+```JavaScript
+degit vallafederico/starters/webgl/three/
 ```

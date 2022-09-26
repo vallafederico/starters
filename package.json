@@ -1,0 +1,8 @@
+{
+  "name": "starters",
+  "version": "1.0.0",
+  "description": "mixed scaffolds and boilerplate code",
+  "main": "index.js",
+  "author": "vallafederico",
+  "license": "MIT"
+}

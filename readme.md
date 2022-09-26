@@ -8,6 +8,6 @@
 
 ##### Basis THREEjs
 
-```JavaScript
+``` JavaScript
 degit vallafederico/starters/webgl/three/
 ```

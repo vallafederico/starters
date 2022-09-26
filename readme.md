@@ -8,7 +8,7 @@
 
 #### Javascript
 
-→ vanilla js
+vanilla js
 
 ```JavaScript
 degit vallafederico/starters/js/.../
@@ -16,19 +16,19 @@ degit vallafederico/starters/js/.../
 
 #### WebGl
 
-→ threejs
+threejs
 
 ```JavaScript
 degit vallafederico/starters/webgl/three/
 ```
 
-→ ogl
+ogl
 
 ```JavaScript
 degit vallafederico/starters/webgl/ogl/
 ```
 
-→ vanilla webgl
+vanilla webgl
 
 ```JavaScript
 degit vallafederico/starters/webgl/vanilla/

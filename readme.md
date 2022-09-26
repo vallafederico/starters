@@ -6,19 +6,19 @@
 
 ### Clone Scripts
 
-##### threejs
+##### → threejs
 
 ```JavaScript
 degit vallafederico/starters/webgl/three/
 ```
 
-##### ogl
+##### → ogl
 
 ```JavaScript
 degit vallafederico/starters/webgl/ogl/
 ```
 
-##### vanilla
+##### → vanilla
 
 ```JavaScript
 degit vallafederico/starters/webgl/vanilla/

@@ -13,8 +13,10 @@ const FILES = {
 const SETTINGS = {
   bundle: true,
   sourcemap: !production,
-  loader: { ".png": "dataurl" },
-  loader: { ".webp": "dataurl" },
+  loader: {
+    ".png": "dataurl",
+    ".webp": "dataurl",
+  },
 };
 
 /* -- Plugins */

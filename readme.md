@@ -10,7 +10,7 @@
 
 Vanilla Js
 
-```JavaScript
+```console
 degit vallafederico/starters/js/.../
 ```
 
@@ -18,30 +18,30 @@ degit vallafederico/starters/js/.../
 
 Three Js
 
-```JavaScript
+```console
 degit vallafederico/starters/webgl/three/
 ```
 
-```JavaScript
+```console
 degit vallafederico/starters/webgl/three/src/gl
 ```
 
 Ogl
 
-```JavaScript
+```console
 degit vallafederico/starters/webgl/ogl/
 ```
 
-```JavaScript
+```console
 degit vallafederico/starters/webgl/ogl/src/gl
 ```
 
 WebGl
 
-```JavaScript
+```console
 degit vallafederico/starters/webgl/vanilla/
 ```
 
-```JavaScript
+```console
 degit vallafederico/starters/webgl/vanilla/src/gl
 ```

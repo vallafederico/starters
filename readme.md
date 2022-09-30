@@ -8,7 +8,7 @@
 
 #### Javascript
 
-Vanilla Js
+##### Js
 
 ```console
 degit vallafederico/starters/js/.../
@@ -16,9 +16,7 @@ degit vallafederico/starters/js/.../
 
 #### WebGl
 
-##### Three Js
-
-[Docs.](https://threejs.org/docs/)
+##### ThreeJs
 
 ```console
 degit vallafederico/starters/webgl/three/
@@ -29,8 +27,6 @@ degit vallafederico/starters/webgl/three/src/gl
 ```
 
 ##### Ogl
-
-[Docs.](https://github.com/oframe/ogl)
 
 ```console
 degit vallafederico/starters/webgl/ogl/

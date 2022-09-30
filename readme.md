@@ -30,12 +30,18 @@ Ogl
 
 ```JavaScript
 degit vallafederico/starters/webgl/ogl/
+```
 
+```JavaScript
+degit vallafederico/starters/webgl/ogl/src/gl
 ```
 
 WebGl
 
 ```JavaScript
 degit vallafederico/starters/webgl/vanilla/
+```
 
+```JavaScript
+degit vallafederico/starters/webgl/vanilla/src/gl
 ```

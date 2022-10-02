@@ -1,8 +1,8 @@
-# Viewport Utils
+## Viewport Utils
 
-## CSS
+### CSS
 
-### 100vh Viewport Height variable set
+#### 100vh Viewport Height variable set
 
 ```Javascript
 document.documentElement.style.setProperty(
@@ -11,7 +11,7 @@ document.documentElement.style.setProperty(
 );
 ```
 
-### Set VH unit (constantly)
+#### Set VH unit (constantly)
 
 ```Javascript
 ['DOMContentLoaded', 'resize'].forEach(event => {

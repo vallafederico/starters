@@ -1,6 +1,8 @@
 # Todo
 
-- [ ] move everything to VITE? (Q)
+- [x] move everything to VITE?
+
+- [ ] move all to pnpm
 
 PROS
 

@@ -6,4 +6,4 @@ pnpm i ; pnpm run dev
 
 ## Todo
 
-- [ ] not sure ?
+- [ ] refit starter classes in \_ folder

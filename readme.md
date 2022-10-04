@@ -1,5 +1,11 @@
 # Starters
 
+**A THING I DO FOR ME.**
+
+Feel free to use, but keep in mind this is a me thing. 
+
+Here's a most likely not updated [list of what's coming next](https://github.com/vallafederico/starters/blob/master/todo.md).
+
 Highly opinionated, frictionless way to spin up any creative projects (for me).
 Tries to cover all the things that stand between me and actually starting something new.
 COmposable but standalone as well. Currently (and forever) WIP.
@@ -10,9 +16,6 @@ Currently on [pnpm](https://pnpm.io/) + and [Vite.js](https://vitejs.dev/). You 
 
 
 ### Clone Scripts
-
-
-
 
 #### Javascript
 

@@ -1,10 +1,14 @@
 # Starters
 
+Highly opinionated, frictionless way to spin up any projects (for me).
+Tries to cover all the things that stand between me and actually starting something new.
+Freely composable (if needed).
+
 👀
 
 ---
 
-### Clone Scripts
+## Clone Scripts
 
 #### Javascript
 

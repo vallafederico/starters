@@ -1,6 +1,6 @@
 # Starters
 
-Highly opinionated, frictionless way to spin up any projects (for me).
+Highly opinionated, frictionless way to spin up any creative projects (for me).
 Tries to cover all the things that stand between me and actually starting something new.
 Freely composable (if needed).
 
@@ -59,3 +59,7 @@ degit vallafederico/starters/webgl/vanilla/
 ```console
 degit vallafederico/starters/webgl/vanilla/src/gl
 ```
+
+---
+
+You should use [degit](https://github.com/Rich-Harris/degit) to get files.

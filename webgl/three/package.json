@@ -1,21 +1,19 @@
 {
-  "name": "three-bp",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "t1",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "NODE_ENV=dev node esbuild.config.js",
-    "build": "NODE_ENV=production node esbuild.config.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "author": "",
-  "license": "ISC",
-  "keywords": [],
   "devDependencies": {
-    "esbuild": "^0.15.9",
-    "esbuild-plugin-glsl": "^1.1.0"
+    "vite": "^3.1.0",
+    "vite-plugin-glsl": "^0.4.0"
   },
   "dependencies": {
-    "three": "^0.144.0"
+    "three": "^0.145.0",
+    "tiny-emitter": "^2.1.0"
   }
 }

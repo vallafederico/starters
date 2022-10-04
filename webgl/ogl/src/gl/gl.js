@@ -18,8 +18,8 @@ export default class {
     this.camera = new Cam(this.gl, {});
     this.camera.position.set(0, 0, 5);
 
-    // this.camera.lookAt([0, 0, 0]);
-    // this.controls = new Orbit(this.camera);
+    this.camera.lookAt([0, 0, 0]);
+    this.controls = new Orbit(this.camera);
 
     this.scene = new Scene(this.gl);
     this.time = 0;

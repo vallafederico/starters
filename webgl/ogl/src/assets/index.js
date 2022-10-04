@@ -1,4 +1,3 @@
-export const assets = {
-  tx: null,
-  mod: null
+export const ASSETS = {
+  //   img: null,
 };

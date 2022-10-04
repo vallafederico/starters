@@ -8,10 +8,10 @@
 
 #### Javascript
 
-##### Js
+##### Vite
 
 ```console
-degit vallafederico/starters/js/.../
+degit vallafederico/starters/vite
 ```
 
 #### WebGl

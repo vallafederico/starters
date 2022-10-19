@@ -1,8 +1,8 @@
 import "./style/main.css";
-import Dom from "@m/dom";
-import Viewport from "@m/viewport";
 
-// import { ASSETS } from "@a/";
+import Dom from "./modules/dom";
+import Viewport from "./modules/viewport";
+import Scroll from "./modules/scroll";
 
 class App {
   constructor() {
@@ -15,10 +15,12 @@ class App {
   }
 
   init() {
+    this.scroll = new Scroll();
+
     this.dom = new Dom();
 
     this.initEvents();
-    // this.render()
+    this.render();
   }
 
   initEvents() {
@@ -32,7 +34,8 @@ class App {
   }
 
   render() {
-    this.time += 0.1;
+    // this.time += 0.1;
+    this.scroll?.render();
 
     window.requestAnimationFrame(this.render.bind(this));
   }

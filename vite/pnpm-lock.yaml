@@ -1,11 +1,13 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@studio-freight/lenis': ^0.2.13
   tiny-emitter: ^2.1.0
   vite: ^3.1.0
   vite-plugin-glsl: ^0.4.0
 
 dependencies:
+  '@studio-freight/lenis': 0.2.13
   tiny-emitter: 2.1.0
 
 devDependencies:
@@ -39,6 +41,13 @@ packages:
       estree-walker: 2.0.2
       picomatch: 2.3.1
     dev: true
+
+  /@studio-freight/lenis/0.2.13:
+    resolution: {integrity: sha512-o2vG0JD8Tfx44cx8BrmRsGREf/UxAdiyKGNfpnOyMoWEW/MX8UJ84ldq/lQ39PVCPzDkHw6yLIjCGEkVEhyluw==}
+    dependencies:
+      tiny-emitter: 2.1.0
+      virtual-scroll: 2.2.1
+    dev: false
 
   /esbuild-android-64/0.15.10:
     resolution: {integrity: sha512-UI7krF8OYO1N7JYTgLT9ML5j4+45ra3amLZKx7LO3lmLt1Ibn8t3aZbX5Pu4BjWiqDuJ3m/hsvhPhK/5Y/YpnA==}
@@ -336,6 +345,12 @@ packages:
 
   /tiny-emitter/2.1.0:
     resolution: {integrity: sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==}
+    dev: false
+
+  /virtual-scroll/2.2.1:
+    resolution: {integrity: sha512-RvjcLxluh7B/6GPzLgQ9d0NYG4yqEguTc3MU7AvxyPVltuo2Cq5RokTL9RKUaZCMJ64in2hus0d03gTtoHp55g==}
+    dependencies:
+      tiny-emitter: 2.1.0
     dev: false
 
   /vite-plugin-glsl/0.4.0:

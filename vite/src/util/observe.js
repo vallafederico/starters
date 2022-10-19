@@ -1,17 +1,19 @@
 import Emitter from "tiny-emitter";
 
 export class Observe extends Emitter {
-  constructor(element, config = {}, autoinit = true) {
+  constructor({ element, config }) {
     super();
     this.element = element;
     this.config = {
-      root: config.root || null,
-      margin: config.margin || "10px",
-      threshold: config.threshold || 0,
-      autoinit: autoinit,
+      root: config?.root || null,
+      margin: config?.margin || "10px",
+      threshold: config?.threshold || 0,
     };
 
+    console.log(this.config);
+
     this.init();
+    this.start();
   }
 
   init() {
@@ -19,13 +21,12 @@ export class Observe extends Emitter {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log("in");
-            this.emit("IN");
+            this.isIn();
           }
         });
       },
       {
-        root: this.config.root,
+        // root: this.config.root,
         rootMargin: this.config.margin,
         threshold: this.config.threshold,
       }
@@ -35,8 +36,7 @@ export class Observe extends Emitter {
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) {
-            console.log("out");
-            this.emit("OUT");
+            this.isOut();
           }
         });
       },
@@ -46,8 +46,6 @@ export class Observe extends Emitter {
         threshold: 0,
       }
     );
-
-    if (this.config.autoinit) this.start();
   }
 
   start() {
@@ -58,6 +56,16 @@ export class Observe extends Emitter {
   stop() {
     this.in.unobserve(this.element);
     this.out.unobserve(this.element);
+  }
+
+  isIn() {
+    console.log("in");
+    this.emit("IN");
+  }
+
+  isOut() {
+    console.log("out");
+    this.emit("OUT");
   }
 }
 

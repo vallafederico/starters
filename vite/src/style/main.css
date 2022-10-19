@@ -23,3 +23,8 @@ body {
   min-height: 80vh;
   border: 1px solid blue;
 }
+
+.tracking {
+  min-height: 100vh;
+  border: 1px solid red;
+}

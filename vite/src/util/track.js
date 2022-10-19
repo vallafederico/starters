@@ -2,13 +2,27 @@
 // fix and check code from source
 // fins a good name
 
-// import { getBoundingClientRect } from "@/utils/dom";
-// import { map } from "@/utils/math";
+import { getBoundingClientRect } from "./clientRect";
+import { map } from "./math";
+
+export default class {
+  constructor({ element }) {
+    console.log(element);
+    this.element = element || null;
+
+    this.resize();
+  }
+
+  resize() {
+    this.bounds = getBoundingClientRect(this.element);
+    this.height = window.innerHeight;
+  }
+}
 
 // export default class {
 //   constructor({ element }) {
 //     this.element = element;
-//     this.speed = parseFloat(this.element.dataset.animationSpeed);
+//     this.speed = parseFloat(this.element.dataset.animationSpeed || 1);
 
 //     this.onResize();
 //   }

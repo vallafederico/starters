@@ -1,3 +1,6 @@
 # Vite Boilerplate
 
-## runs on pnpm !!!
+#### TODO
+
+- [ ] implement text class
+- [ ] implement track class (?)

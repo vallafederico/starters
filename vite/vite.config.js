@@ -15,9 +15,10 @@ export default defineConfig({
   plugins,
   resolve: {
     alias: {
-      "@m": fileURLToPath(new URL("./src/modules", import.meta.url)),
-      "@u": fileURLToPath(new URL("./src/util", import.meta.url)),
-      "@a": fileURLToPath(new URL("./src/assets", import.meta.url)),
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
+      // "@m": fileURLToPath(new URL("./src/modules", import.meta.url)),
+      // "@u": fileURLToPath(new URL("./src/util", import.meta.url)),
+      // "@a": fileURLToPath(new URL("./src/assets", import.meta.url)),
     },
   },
 });

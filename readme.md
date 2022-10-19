@@ -1,14 +1,21 @@
 # Starters
 
+**A THING I DO FOR ME.**
+
+Feel free to use, but keep in mind this is a me thing. 
+
+Here's a most likely not updated [list of what's coming next](https://github.com/vallafederico/starters/blob/master/todo.md).
+
 Highly opinionated, frictionless way to spin up any creative projects (for me).
 Tries to cover all the things that stand between me and actually starting something new.
-Freely composable (if needed).
+COmposable but standalone as well. Currently (and forever) WIP.
+
+Currently on [pnpm](https://pnpm.io/) + and [Vite.js](https://vitejs.dev/). You might want to use [degit](https://github.com/Rich-Harris/degit) to get the files.
 
 👀
 
----
 
-## Clone Scripts
+### Clone Scripts
 
 #### Javascript
 
@@ -60,6 +67,3 @@ degit vallafederico/starters/webgl/vanilla/
 degit vallafederico/starters/webgl/vanilla/src/gl
 ```
 
----
-
-You should use [degit](https://github.com/Rich-Harris/degit) to get files.

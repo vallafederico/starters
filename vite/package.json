@@ -14,6 +14,8 @@
   },
   "dependencies": {
     "@studio-freight/lenis": "^0.2.13",
+    "@unseenco/taxi": "^1.2.0",
+    "gsap": "npm:@gsap/shockingly@^3.11.3",
     "tiny-emitter": "^2.1.0"
   }
 }

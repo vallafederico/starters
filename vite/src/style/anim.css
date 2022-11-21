@@ -1,0 +1,16 @@
+/* --- Text Animation */
+
+[data-a="char"] div,
+[data-a="word"] div,
+[data-a="line"] div {
+  /* border: 1px solid blue; */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+[data-a="char"] div div,
+[data-a="word"] div div,
+[data-a="line"] div div {
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+}

@@ -56,10 +56,7 @@ function serveFile() {
       plugins: PLUGINS,
     }
   ).then((server) => {
-    console.log(`↑ FLOW`);
-    console.log(" ");
-    console.log("https://webflow.com/design/z0nes");
-    console.log("https://codesandbox.io/s/z0nes-relay-2bv8mz");
+    console.log("http://localhost:8000/dev.js");
     //   server.stop();
   });
 }
@@ -84,3 +81,15 @@ if (production) {
 } else {
   serveDev();
 }
+
+/*
+.package.json 
+
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=dev node esbuild.config.js",
+    "build": "NODE_ENV=production node esbuild.config.js",
+    "flow": "NODE_ENV=flow node esbuild.config.js"
+  },
+  
+*/

@@ -1,7 +1,7 @@
 import Emitter from "tiny-emitter";
 
 export class Observe extends Emitter {
-  constructor({ element, config }) {
+  constructor({ element, config, addClass }) {
     super();
     this.element = element;
     this.config = {
@@ -10,8 +10,7 @@ export class Observe extends Emitter {
       threshold: config?.threshold || 0,
     };
 
-    console.log(this.config);
-
+    if (addClass !== undefined) this.addClass = addClass;
     this.init();
     this.start();
   }
@@ -59,12 +58,14 @@ export class Observe extends Emitter {
   }
 
   isIn() {
-    console.log("in");
+    // console.log("in");
+    if (this.addClass) this.element.classList.add(this.addClass);
     this.emit("IN");
   }
 
   isOut() {
-    console.log("out");
+    // console.log("out");
+    if (this.addClass) this.element.classList.remove(this.addClass);
     this.emit("OUT");
   }
 }

@@ -13,7 +13,7 @@ export default class extends Lenis {
     });
 
     this.isActive = true;
-    this.timeFactor = 5;
+    this.timeFactor = 10;
     this.time = 0;
 
     this.init();

@@ -2,12 +2,16 @@ lockfileVersion: 5.4
 
 specifiers:
   '@studio-freight/lenis': ^0.2.13
+  '@unseenco/taxi': ^1.2.0
+  gsap: npm:@gsap/shockingly@^3.11.3
   tiny-emitter: ^2.1.0
   vite: ^3.1.0
   vite-plugin-glsl: ^0.4.0
 
 dependencies:
   '@studio-freight/lenis': 0.2.13
+  '@unseenco/taxi': 1.2.0
+  gsap: /@gsap/shockingly/3.11.3
   tiny-emitter: 2.1.0
 
 devDependencies:
@@ -34,6 +38,10 @@ packages:
     dev: true
     optional: true
 
+  /@gsap/shockingly/3.11.3:
+    resolution: {integrity: sha512-YG1xjWe8HP6IDA2UT98xcsEVLt+6vJB2joyiYbc1RJLvXHeft/FYqlUKM0uRMOBpK1GSn2Ziq2JCaJwyrDZQVg==}
+    dev: false
+
   /@rollup/pluginutils/4.2.1:
     resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
     engines: {node: '>= 8.0.0'}
@@ -47,6 +55,18 @@ packages:
     dependencies:
       tiny-emitter: 2.1.0
       virtual-scroll: 2.2.1
+    dev: false
+
+  /@unseenco/e/2.2.3:
+    resolution: {integrity: sha512-ntxSrExl+KRWjbD3D4U2AnDZAwD0BZyhowQ6y+bbPqvvEkKfFdTlGNUa/xCwezHvZe+YowJ+mHAGjxtvMtK73Q==}
+    dependencies:
+      selector-set: 1.1.5
+    dev: false
+
+  /@unseenco/taxi/1.2.0:
+    resolution: {integrity: sha512-wW3+4F2te0r8WqDcs1b3z7oC3rbhxhTNVO3sWTVYKxsuuXXrdkqekJbi3Ifp+ADT76FyhV05wMKg2tB/0urbUA==}
+    dependencies:
+      '@unseenco/e': 2.2.3
     dev: false
 
   /esbuild-android-64/0.15.10:
@@ -332,6 +352,10 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /selector-set/1.1.5:
+    resolution: {integrity: sha512-6SQw6yMew5iOZ8/cDHDEnJWRM4ot2mxP6szZyF5ptrBogw4AcS4EXRj/8BUfgAMwVfdL84qpModlBMOl2NVrsQ==}
+    dev: false
 
   /source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}

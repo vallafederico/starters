@@ -6,9 +6,7 @@ Feel free to use, but keep in mind this is a me thing.
 
 Here's a most likely not updated [list of what's coming next](https://github.com/vallafederico/starters/blob/master/todo.md).
 
-Highly opinionated, frictionless way to spin up any creative dev projects (for me).
-Tries to cover all the things that stand between me and actually starting something new.
-Composable standalone pieces. You might want a starter
+Highly opinionated, frictionless way to spin up creative dev projects (for me). Tries to cover all the things that stand between me and actually starting something new. An attempt in standalone but composable pieces.
 
 Currently (and forever) WIP.
 

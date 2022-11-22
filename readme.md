@@ -12,7 +12,8 @@ Composable standalone pieces. You might want a starter
 
 Currently (and forever) WIP.
 
-Works on [pnpm](https://pnpm.io/) + and [Vite.js](https://vitejs.dev/). You might want to use [degit](https://github.com/Rich-Harris/degit) to get the files.
+Works on [pnpm](https://pnpm.io/) + and (mostly, for consistency) [Vite.js](https://vitejs.dev/).
+You might want to use [degit](https://github.com/Rich-Harris/degit) to get the files.
 
 👀
 
@@ -68,7 +69,9 @@ degit vallafederico/starters/webgl/twgl/src/gl
 
 ### Webflow
 
-#### Esbuild
+Webflow basic starter runs on [ESBUILD](https://esbuild.github.io/) and [pnpm](https://pnpm.io/).
+
+#### EsBuild
 
 Complete Boilerplate
 

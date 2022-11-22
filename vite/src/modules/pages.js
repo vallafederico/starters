@@ -38,12 +38,12 @@ export default class extends Core {
 }
 
 // initEvents() {
-//   this.on("NAVIGATE_IN", ({ to, trigger }) => {
-//     // console.log("IN", to, trigger);
-//   });
-
 //   this.on("NAVIGATE_OUT", ({ from, trigger }) => {
 //     // console.log("OUT", from, trigger);
+//   });
+
+//   this.on("NAVIGATE_IN", ({ to, trigger }) => {
+//     // console.log("IN", to, trigger);
 //   });
 
 //   this.on("NAVIGATE_END", ({ to, from, trigger }) => {

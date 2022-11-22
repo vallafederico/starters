@@ -2,18 +2,19 @@
 
 **A THING I DO FOR ME.**
 
-Feel free to use, but keep in mind this is a me thing. 
+Feel free to use, but keep in mind this is a me thing.
 
 Here's a most likely not updated [list of what's coming next](https://github.com/vallafederico/starters/blob/master/todo.md).
 
-Highly opinionated, frictionless way to spin up any creative projects (for me).
+Highly opinionated, frictionless way to spin up any creative dev projects (for me).
 Tries to cover all the things that stand between me and actually starting something new.
-COmposable but standalone as well. Currently (and forever) WIP.
+Composable standalone pieces. You might want a starter
 
-Currently on [pnpm](https://pnpm.io/) + and [Vite.js](https://vitejs.dev/). You might want to use [degit](https://github.com/Rich-Harris/degit) to get the files.
+Currently (and forever) WIP.
+
+Works on [pnpm](https://pnpm.io/) + and [Vite.js](https://vitejs.dev/). You might want to use [degit](https://github.com/Rich-Harris/degit) to get the files.
 
 👀
-
 
 ### Clone Scripts
 
@@ -21,8 +22,16 @@ Currently on [pnpm](https://pnpm.io/) + and [Vite.js](https://vitejs.dev/). You 
 
 ##### Vite
 
+Complete Boilerplate
+
 ```console
 degit vallafederico/starters/vite
+```
+
+Modules Only
+
+```console
+degit ...
 ```
 
 #### WebGl
@@ -32,6 +41,8 @@ degit vallafederico/starters/vite
 ```console
 degit vallafederico/starters/webgl/three/
 ```
+
+GL folder only
 
 ```console
 degit vallafederico/starters/webgl/three/src/gl
@@ -43,6 +54,8 @@ degit vallafederico/starters/webgl/three/src/gl
 degit vallafederico/starters/webgl/ogl/
 ```
 
+GL folder only
+
 ```console
 degit vallafederico/starters/webgl/ogl/src/gl
 ```
@@ -52,6 +65,8 @@ degit vallafederico/starters/webgl/ogl/src/gl
 ```console
 degit vallafederico/starters/webgl/twgl/
 ```
+
+GL folder only
 
 ```console
 degit vallafederico/starters/webgl/twgl/src/gl
@@ -63,7 +78,8 @@ degit vallafederico/starters/webgl/twgl/src/gl
 degit vallafederico/starters/webgl/vanilla/
 ```
 
+GL folder only
+
 ```console
 degit vallafederico/starters/webgl/vanilla/src/gl
 ```
-

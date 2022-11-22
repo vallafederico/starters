@@ -18,7 +18,6 @@ class App {
   init() {
     this.scroll = new Scroll();
     this.pages = new Pages();
-
     this.dom = new Dom();
 
     this.initEvents();

@@ -2,5 +2,12 @@
 
 #### TODO
 
-- [ ] implement text class
-- [ ] implement track class (?)
+##### Animations
+
+- [x] text class
+- [ ] track class (?)
+
+##### Gl
+
+- [ ] preloader class (should be in gl?)
+- [ ] with emitting promises

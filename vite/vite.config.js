@@ -1,6 +1,5 @@
 import { defineConfig } from "vite";
-import { resolve } from "path"; // https://vitejs.dev/guide/build.html#multi-page-app
-
+// import { resolve } from "path"; // https://vitejs.dev/guide/build.html#multi-page-app
 import { fileURLToPath, URL } from "url";
 import glsl from "vite-plugin-glsl";
 

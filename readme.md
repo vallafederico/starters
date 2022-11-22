@@ -16,11 +16,13 @@ Works on [pnpm](https://pnpm.io/) + and [Vite.js](https://vitejs.dev/). You migh
 
 👀
 
-### Clone Scripts
+---
 
-#### Javascript
+## Clone
 
-##### Vite
+### Javascript
+
+#### Vite
 
 Complete Boilerplate
 
@@ -28,58 +30,38 @@ Complete Boilerplate
 degit vallafederico/starters/vite
 ```
 
-Modules Only
-
 ```console
 degit ...
 ```
 
-#### WebGl
+### WebGl
 
-##### ThreeJs
+#### ThreeJs
 
 ```console
 degit vallafederico/starters/webgl/three/
 ```
 
-GL folder only
-
 ```console
 degit vallafederico/starters/webgl/three/src/gl
 ```
 
-##### Ogl
+#### Ogl
 
 ```console
 degit vallafederico/starters/webgl/ogl/
 ```
 
-GL folder only
-
 ```console
 degit vallafederico/starters/webgl/ogl/src/gl
 ```
 
-##### Twgl
+#### Twgl
 
 ```console
 degit vallafederico/starters/webgl/twgl/
 ```
 
-GL folder only
-
 ```console
 degit vallafederico/starters/webgl/twgl/src/gl
-```
-
-##### Native
-
-```console
-degit vallafederico/starters/webgl/vanilla/
-```
-
-GL folder only
-
-```console
-degit vallafederico/starters/webgl/vanilla/src/gl
 ```

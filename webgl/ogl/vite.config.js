@@ -12,6 +12,7 @@ const config = {};
 const plugins = [glsl()];
 
 export default defineConfig({
+  assetsInclude: ["**/*.gltf"],
   plugins,
   resolve: {
     alias: {

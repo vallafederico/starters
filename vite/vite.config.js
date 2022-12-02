@@ -3,16 +3,11 @@ import { defineConfig } from "vite";
 import { fileURLToPath, URL } from "url";
 import glsl from "vite-plugin-glsl";
 
-// folder struct
-const folders = {};
-
-// config
-const config = {};
-
 // plugins
 const plugins = [glsl()];
 
 export default defineConfig({
+  assetsInclude: ["**/*.gltf"],
   plugins,
   resolve: {
     alias: {

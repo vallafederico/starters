@@ -9,7 +9,7 @@ export default class extends Mesh {
     this.program = new Material(this.gl);
   }
 
-  resize() {}
+  resize(vp) {}
 
   render(t) {
     this.program.time = t;

@@ -11,9 +11,11 @@ export default class {
     this.quad.program.texture = this.rt.texture;
   }
 
-  resize(gl) {
-    this.gl = gl;
-    this.quad.resize();
+  resize(vp) {
+    this.vp = vp;
+
+    this.rt = new RenderTarget(this.gl, {});
+    this.quad.resize(vp);
   }
 
   render(t) {

@@ -8,7 +8,7 @@ export const ANIM = {
     out: {
       d: 1.2,
       e: "expo.out",
-      each: 00,
+      each: 0,
     },
   },
   page: {

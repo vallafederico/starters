@@ -1,6 +1,6 @@
 // fix scroll value based on picked boilerplate
 
-export const getBoundingClientRect = (element) => {
+export const clientRect = (element) => {
   const bounds = element.getBoundingClientRect();
 
   let scroll = 0;
@@ -9,9 +9,12 @@ export const getBoundingClientRect = (element) => {
   return {
     bottom: bounds.bottom + scroll,
     height: bounds.height,
-    left: bounds.left,
-    right: bounds.right,
+    // left: bounds.left,
+    // right: bounds.right,
     top: bounds.top + scroll,
-    width: bounds.width,
+    // width: bounds.width,
+    wh: window.innerHeight,
+    // ww: window.innerWidth,
+    offset: bounds.top + scroll,
   };
 };

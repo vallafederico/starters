@@ -1,5 +1,5 @@
-import { assets } from "../../assets/";
-import loadTexture from "./texture-loader";
+import { ASSETS } from "../../assets/";
+import { loadTexture } from "./texture-loader";
 
 export default class {
   constructor(data) {
@@ -7,12 +7,11 @@ export default class {
   }
 
   async load() {
-    const [diffuse] = await Promise.all([loadTexture(assets.tx)]);
-
-    return {
-      diffuse,
-      ratio:
-        diffuse.source.data.naturalWidth / diffuse.source.data.naturalHeight,
-    };
+    // const [diffuse] = await Promise.all([loadTexture(assets.tx)]);
+    // return {
+    //   diffuse,
+    //   ratio:
+    //     diffuse.source.data.naturalWidth / diffuse.source.data.naturalHeight,
+    // };
   }
 }

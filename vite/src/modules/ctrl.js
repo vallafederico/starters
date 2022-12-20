@@ -1,4 +1,4 @@
-export const A = {
+export const ANIM = {
   t: {
     in: {
       d: 1.2,

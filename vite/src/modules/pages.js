@@ -16,6 +16,22 @@ export default class extends Core {
     window.router = this;
   }
 
+  useProps() {
+    // setup props
+    this.props = {
+      from: getPath(window.location.href),
+      to: null,
+    };
+
+    this.on("NAVIGATE_OUT", ({ trigger }) => {
+      if (trigger === "popstate") {
+        this.props.to = getPath(location.href);
+      } else {
+        this.props.to = getPath(trigger.href);
+      }
+    });
+  }
+
   async transitionOut(page) {
     await Promise.allSettled([
       window.app.dom.transitionOut(page),
@@ -35,6 +51,16 @@ export default class extends Core {
     // console.log("transition In", page);
     return Promise.resolve();
   }
+}
+
+/**
+ * Utils
+ */
+function getPath(url) {
+  const fullUrl = new URL(url);
+  const splitPath = fullUrl.pathname.split("/");
+  const [, second, third] = splitPath;
+  return [second, third];
 }
 
 // initEvents() {

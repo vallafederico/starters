@@ -1,9 +1,7 @@
 import "./style/main.css";
-import Dom from "@m/dom";
-import Viewport from "@m/viewport";
+import Dom from "./modules/dom";
+import Viewport from "./modules/viewport";
 import Gl from "./gl/gl";
-
-// import { ASSETS } from "@a/";
 
 class App {
   constructor() {

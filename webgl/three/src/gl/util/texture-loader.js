@@ -1,21 +1,13 @@
-import { TextureLoader, Math } from "three";
+import { TextureLoader } from "three";
 const tl = new TextureLoader();
 
 export default function loadTexture(url) {
-  return new Promise(resolve => {
-    tl.load(url, data => {
-      if (
-        !Math.isPowerOfTwo(data.image.width) ||
-        !Math.isPowerOfTwo(data.image.height)
-      ) {
-        // console.warn(`>>> "${url}" image size is not power of 2 <<<`);
-      }
-
+  return new Promise((resolve) => {
+    tl.load(url, (data) => {
       data.needsUpdate = true;
       resolve(data);
     });
   });
 }
-
 
 // this.texture = await loadTexture(dbgImg);

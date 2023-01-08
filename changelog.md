@@ -1,6 +1,6 @@
 # Changelog
 
-#### 08/01/22
+#### 08/01/23
 
 - [x] VITE: proper Translation class
 - [x] OGL: Post: recreate render target in resize otherwise goes tits up
@@ -20,3 +20,8 @@
 - [x] ASTRO: add `content.js` (in components) with custom import function not to use astro.glob
 - [x] ASTRO: fix `section` **in boilerplate** from _offficestud.io_
 - [x] with scroll bounce: (touch action none for mobile fixes like refresh and such)
+- [x] THREE — remove `Math` import from three in `textureLoader` and remove powerof2 check (or do it properly)
+- [x] THREE — default post processing class _(get from vcore)_
+- [x] THREE — move post files to bp
+- [x] VITE: setup props for taxi transition
+- [x] THREE Remove site specific things in app.js (all actually) ??

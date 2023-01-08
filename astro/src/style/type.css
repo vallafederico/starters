@@ -1,0 +1,9 @@
+/* ------------------------------  Fonts */
+@font-face {
+  font-family: "Sohne-web";
+  src: url("/fonts/Sohne-Buch-webh.woff2") format("woff2"),
+    url("/fonts/Sohne-Buch-webh.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

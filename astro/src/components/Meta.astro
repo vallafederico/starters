@@ -1,0 +1,23 @@
+---
+const { title, imageUrl, description, keyworks } = Astro.props;
+const def = {
+  description: "... Description",
+  keywords: "... Keywords",
+  imageUrl: "/util/...",
+};
+---
+
+<!-- page -->
+<title>{title}</title>
+
+<!-- basic -->
+<meta name="description" content={description || def.description} />
+<meta name="keywords" content={keyworks || "Contemporary Design Studio"} />
+<!-- <meta name="author" content="John Doe" /> -->
+
+<!-- ogs -->
+<meta property="og:title" content={title} />
+<meta property="og:image" content={imageUrl || def.imageUrl} />
+<meta property="og:description" content={description || def.description} />
+<!-- <meta property="og:type" content={type} /> -->
+<!-- <meta property="og:url" content={canonicalUrl} /> -->

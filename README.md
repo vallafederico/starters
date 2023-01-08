@@ -30,7 +30,7 @@ degit vallafederico/starters/vite
 ```
 
 ```console
-degit ...
+degit vallafederico/starters/vite/src
 ```
 
 ### Generators

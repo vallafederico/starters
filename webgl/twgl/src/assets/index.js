@@ -1,3 +1,4 @@
 export const ASSETS = {
-  //   img: null,
+  // img: image1,
+  // m1: model,
 };

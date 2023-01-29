@@ -2,8 +2,8 @@ import { clientRect } from "../../util/clientRect.js";
 import { map, clamp } from "../../util/math.js";
 
 export class Transform {
-  constructor({ el, config }) {
-    this.el = el;
+  constructor({ element, config }) {
+    this.el = element;
 
     this.config = {
       bounds: [0, 1],
@@ -16,19 +16,22 @@ export class Transform {
 
   resize() {
     this.bounds = clientRect(this.el);
-    // console.log(this.bounds);
+    // console.log("resize", this.bounds);
   }
 
   render() {
-    let val = map(
-      window.app.scroll.y, // value
-      this.bounds.top, // low1
-      this.bounds.bottom, // high1
-      this.config.bounds[0],
-      this.config.bounds[1] // low2, high2
+    this.perc = clamp(
+      0,
+      1,
+      map(
+        window.sscroll.y, // value
+        this.bounds.top, // low1
+        this.bounds.bottom, // high1
+        this.config.bounds[0],
+        this.config.bounds[1] // low2, high2
+      )
     );
 
-    val = clamp(0, 1, val);
-    this.perc = val;
+    // console.log(this.perc);
   }
 }

@@ -21,7 +21,7 @@ body {
 }
 
 .sec {
-  min-height: 80vh;
+  min-height: 100vh;
   /* border: 1px solid blue; */
   display: flex;
   flex-direction: column;
@@ -75,4 +75,8 @@ body {
   top: 0px;
   width: 20%;
   box-sizing: content-box;
+}
+
+[data-a="transform"] {
+  border: 1px solid pink;
 }

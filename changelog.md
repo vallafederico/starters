@@ -1,7 +1,5 @@
 # Changelog
 
-#### 08/01/23
-
 - [x] VITE: proper Translation class
 - [x] OGL: Post: recreate render target in resize otherwise goes tits up
 - [x] VITE: setup basic assetsinclude as default (webp)
@@ -25,3 +23,5 @@
 - [x] THREE — move post files to bp
 - [x] VITE: setup props for taxi transition
 - [x] THREE Remove site specific things in app.js (all actually) ??
+
+- [x] (29/01/23) VITE → scroll start values percent

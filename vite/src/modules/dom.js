@@ -1,39 +1,35 @@
 import { Text } from "./animation/text";
+// import { Transform } from "./animation/transform";
 
 export default class {
-  constructor() {}
+  constructor() {
+    // this.create();
+  }
 
   resize() {}
 
-  /* -- Text */
+  render(t) {}
 
-  createText() {
-    const chars = [...document.querySelectorAll('[data-a="char"]')];
-    const words = [...document.querySelectorAll('[data-a="word"]')];
-    const lines = [...document.querySelectorAll('[data-a="line"]')];
-
-    this.text = {
-      chars: chars.map((el) => new Text({ element: el })),
-      words: words.map((el) => new Text({ element: el })),
-      lines: lines.map((el) => new Text({ element: el })),
-    };
+  create() {
+    this.texts = [
+      ...document.querySelectorAll(
+        '[data-a="char"],[data-a="word"],[data-a="line"]'
+      ),
+    ].map((el) => new Text({ element: el }));
   }
 
-  destroyText() {
-    this.text.chars.forEach((char) => char.animateOut());
-    this.text.words.forEach((word) => word.animateOut());
-    this.text.lines.forEach((line) => line.animateOut());
+  destroy() {
+    this.texts.forEach((text) => text.animateOut());
   }
 
   /* --  Pages */
-
   transitionOut(page) {
     // console.log("DOM•tranOut", page);
 
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve();
-      }, 500);
+      }, 100);
     });
   }
 
@@ -43,7 +39,7 @@ export default class {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve();
-      }, 500);
+      }, 100);
     });
   }
 }

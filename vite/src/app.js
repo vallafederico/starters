@@ -37,6 +37,7 @@ class App {
   render() {
     // this.time += 0.1;
     this.scroll?.render();
+    this.dom?.render();
 
     window.requestAnimationFrame(this.render.bind(this));
   }

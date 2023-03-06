@@ -3,7 +3,7 @@ import { Observe } from "../../util/observe";
 
 // NEEDS CHECKING!
 
-export default class extends Observe {
+export class Alpha extends Observe {
   constructor({ element, anim }) {
     super({
       element,
@@ -24,6 +24,15 @@ export default class extends Observe {
       ...anim,
     };
 
+    this.params = {
+      in: {
+        autoAlpha: 1,
+      },
+      out: {
+        autoAlpha: 1,
+      },
+    };
+
     this.element = element;
     this.animated = this.element;
   }
@@ -40,7 +49,7 @@ export default class extends Observe {
   animateIn() {
     if (this.animation) this.animation.kill();
     this.animation = gsap.to(this.animated, {
-      autoAlpha: 1,
+      ...this.params.in,
       duration: this.anim.d,
       ease: this.anim.ease,
       delay: this.anim.delay,
@@ -51,7 +60,7 @@ export default class extends Observe {
     this.stop();
     if (this.animation) this.animation.kill();
     this.animation = gsap.to(this.animated, {
-      autoAlpha: 0,
+      ...this.params.out,
       duration: this.anim.d,
       ease: this.anim.ease,
       delay: 0,
@@ -60,7 +69,7 @@ export default class extends Observe {
 
   setIn() {
     if (this.animation) this.animation.kill();
-    gsap.set(this.animated, { autoAlpha: 1 });
+    gsap.set(this.animated, { ...this.params.out });
   }
 
   setOut() {

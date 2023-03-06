@@ -1,7 +1,7 @@
 import "./style/main.css";
 import Dom from "./modules/dom";
 import Viewport from "./modules/viewport";
-import Gl from "./gl/gl";
+import { Gl } from "./gl/gl";
 
 class App {
   constructor() {

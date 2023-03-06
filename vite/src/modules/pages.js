@@ -1,6 +1,6 @@
 import { Core } from "@unseenco/taxi";
 
-export default class extends Core {
+export class Pages extends Core {
   constructor() {
     super({
       links: "a:not([target]):not([href^=\\#]):not([data-taxi-ignore])",

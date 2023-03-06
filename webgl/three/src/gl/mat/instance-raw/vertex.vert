@@ -18,3 +18,10 @@ void main() {
   gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
   v_uv = uv;
 }
+
+
+/*
+  vec4 m_pos = modelViewMatrix * vec4(position, 1.0);
+  gl_PointSize = 1000. * (1. / -m_pos.z);
+  gl_Position = projectionMatrix * m_pos;
+*/

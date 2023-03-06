@@ -5,7 +5,7 @@ import { easeOutExpo } from "../util/easings.js";
 //   return Math.min(1, 1.001 - Math.pow(2, -10 * x));
 // }
 
-export default class extends Lenis {
+export class Scroll extends Lenis {
   constructor() {
     super({
       duration: 1,

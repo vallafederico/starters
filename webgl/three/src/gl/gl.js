@@ -2,11 +2,12 @@ import { WebGLRenderer } from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
 // import Loader from "./util/loader.js";
+
 import Viewport from "./viewport.js";
 import Scene from "./scene.js";
 import Camera from "./camera.js";
 
-export default class Gl {
+export class Gl {
   constructor(sel) {
     this.vp = new Viewport();
     this.renderer = new WebGLRenderer({});
@@ -19,7 +20,7 @@ export default class Gl {
     this.camera = this.vp.camera = new Camera();
 
     this.camera.position.set(0, 0, 2);
-    this.controls = new OrbitControls(this.camera, document.body);
+    this.controls = new OrbitControls(this.camera, this.renderer.domElement);
 
     this.paused = false;
     this.time = 0;
@@ -27,9 +28,9 @@ export default class Gl {
     this.init();
   }
 
-  init() {
-    // this.loader = new Loader()
-    // this.assets = await this.loader.load()
+  async init() {
+    // this.loader = new Loader();
+    // this.assets = await this.loader.load();
 
     this.create();
     this.initEvents();

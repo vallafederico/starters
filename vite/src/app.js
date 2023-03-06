@@ -1,9 +1,9 @@
 import "./style/main.css";
 
-import Dom from "./modules/dom";
-import Viewport from "./modules/viewport";
-import Scroll from "./modules/scroll";
-import Pages from "./modules/pages";
+import { Dom } from "./modules/dom";
+import { Viewport } from "./modules/viewport";
+import { Scroll } from "./modules/scroll";
+import { Pages } from "./modules/pages";
 
 class App {
   constructor() {

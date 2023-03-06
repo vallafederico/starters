@@ -3,7 +3,7 @@ export default class {
     this.w = window.innerWidth;
     this.h = window.innerHeight;
     this.pixelRatio = Math.min(window.devicePixelRatio, 2);
-    this.container = document.getElementById(sel);
+    this.container = document.querySelector('[data-gl="c"]');
   }
 
   resize() {

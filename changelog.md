@@ -25,3 +25,16 @@
 - [x] THREE Remove site specific things in app.js (all actually) ??
 
 - [x] (29/01/23) VITE → scroll start values percent
+
+## 06/03/23
+
+- [x] VITE → to named imports
+- [x] VITE → animation with controls (as in lasso.ai)
+- [x] THREE → add in raw-instance the basic point shader lines
+- [x] THREE → fix controls going wild — gl.js
+- [x] THREE → fix draco workflow
+- [x] THREE → fix viewport canvsas initiator (viewport.js)
+- [x] THREE + ALL → set a generic GUI from starter (from lasso)
+- [x] THREE → rename asset import in /loader to ALLCAPS
+- [x] ALL → add basic glsl include from filed
+- [x] ALL → add gUI class @ app level

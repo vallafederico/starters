@@ -1,7 +1,7 @@
 import { Text } from "./animation/text";
 // import { Transform } from "./animation/transform";
 
-export default class {
+export class Dom {
   constructor() {
     // this.create();
   }

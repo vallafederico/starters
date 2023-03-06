@@ -19,10 +19,21 @@ export class Text extends Observe {
       d: 1.2,
       ease: "expo.out",
       delay: 0.1,
-      each: 0.05,
-      from: "start",
       once: false,
+      stagger: {
+        each: 0.05,
+        from: "start",
+      },
       ...anim,
+    };
+
+    this.params = {
+      in: {
+        y: "0%",
+      },
+      out: {
+        y: "200%",
+      },
     };
 
     this.element = element;
@@ -43,13 +54,13 @@ export class Text extends Observe {
   animateIn() {
     if (this.animation) this.animation.kill();
     this.animation = gsap.to(this.animated, {
-      y: "0%",
+      ...this.params.in,
       duration: this.anim.d,
       ease: this.anim.ease,
       delay: this.anim.delay,
       stagger: {
-        each: this.anim.each,
-        from: this.anim.from,
+        each: this.anim.stagger.each,
+        from: this.anim.stagger.from,
       },
     });
   }
@@ -58,12 +69,12 @@ export class Text extends Observe {
     this.stop();
     if (this.animation) this.animation.kill();
     this.animation = gsap.to(this.animated, {
-      y: "200%",
+      ...this.params.in,
       duration: this.anim.d,
       ease: this.anim.ease,
       delay: 0,
       stagger: {
-        each: this.anim.each * 0.1,
+        each: this.anim.each,
         from: this.anim.from,
       },
     });
@@ -71,12 +82,12 @@ export class Text extends Observe {
 
   setIn() {
     if (this.animation) this.animation.kill();
-    gsap.set(this.animated, { y: "0%" });
+    gsap.set(this.animated, { ...this.params.in });
   }
 
   setOut() {
     if (this.animation) this.animation.kill();
-    gsap.set(this.animated, { y: "200%" });
+    gsap.set(this.animated, { ...this.params.out });
   }
 }
 

@@ -38,3 +38,7 @@
 - [x] THREE → rename asset import in /loader to ALLCAPS
 - [x] ALL → add basic glsl include from filed
 - [x] ALL → add gUI class @ app level
+
+# 17/03/23
+
+- [x] VITE → added minimal tween library

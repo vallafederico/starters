@@ -75,12 +75,16 @@ degit vallafederico/starters/webgl/twgl/src/gl
 
 ### Webflow
 
-Webflow basic starter runs on [ESBUILD](https://esbuild.github.io/) and [pnpm](https://pnpm.io/).
-
-#### EsBuild
-
-Complete Boilerplate
+#### EsBuild — Tiny
 
 ```console
-degit vallafederico/starters/webflow
+degit vallafederico/starters/webflow/tiny
+```
+
+#### EsBuild — Extended
+
+Minimal Fork From [Fs Dev Starter](https://github.com/finsweet/developer-starter)
+
+```console
+degit vallafederico/starters/webflow/full
 ```

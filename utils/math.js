@@ -15,6 +15,11 @@ export function clamp(min, max, num) {
   return Math.min(Math.max(num, min), max);
 }
 
+// modulo
+function mod(n, m) {
+  return ((n % m) + m) % m;
+}
+
 /** ------------ Angles **/
 export function radToDeg(r) {
   return (r * 180) / Math.PI;

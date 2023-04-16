@@ -46,3 +46,8 @@
 # 04/04/23
 
 - [x] WEBFLOW → added finsweet based esbuild script
+
+# 16/04/23
+
+- [x] ASTRO → updated
+- [x] GEN → better MOD in utlis

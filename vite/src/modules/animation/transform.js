@@ -1,5 +1,5 @@
 import { clientRect } from "../../util/clientRect.js";
-import { map, clamp } from "../../util/math.js";
+import { map, clamp, lerp } from "../../util/math.js";
 
 export class Transform {
   constructor({ element, config }) {
@@ -7,20 +7,21 @@ export class Transform {
 
     this.config = {
       bounds: [0, 1],
+      top: "bottom",
+      bottom: "top",
       ...config,
     };
 
-    this.perc = 0;
+    this.value = 0;
     this.resize();
   }
 
   resize() {
-    this.bounds = clientRect(this.el);
-    // console.log("resize", this.bounds);
+    this.bounds = computeBounds(this.el, this.config);
   }
 
   render() {
-    this.perc = clamp(
+    this.value = clamp(
       0,
       1,
       map(
@@ -31,7 +32,36 @@ export class Transform {
         this.config.bounds[1] // low2, high2
       )
     );
-
-    // console.log(this.perc);
   }
+}
+
+// ---------
+function computeBounds(el, config) {
+  const bounds = clientRect(el);
+
+  switch (config.top) {
+    case "top":
+      bounds.top = bounds.top;
+      break;
+    case "center":
+      bounds.top = bounds.top - bounds.wh / 2;
+      break;
+    case "bottom":
+      bounds.top = bounds.top - bounds.wh;
+      break;
+  }
+
+  switch (config.bottom) {
+    case "top":
+      bounds.bottom = bounds.bottom;
+      break;
+    case "center":
+      bounds.bottom = bounds.bottom - bounds.wh / 2;
+      break;
+    case "bottom":
+      bounds.bottom = bounds.bottom - bounds.wh;
+      break;
+  }
+
+  return { ...bounds };
 }

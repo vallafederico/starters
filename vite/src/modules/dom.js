@@ -1,21 +1,23 @@
 import { Text } from "./animation/text";
-// import { Transform } from "./animation/transform";
+import { Transform } from "./animation/transform";
 
 export class Dom {
   constructor() {
-    // this.create();
+    this.create();
   }
 
   resize() {}
 
-  render(t) {}
+  render(t) {
+    this.track?.render();
+  }
 
   create() {
-    this.texts = [
-      ...document.querySelectorAll(
-        '[data-a="char"],[data-a="word"],[data-a="line"]'
-      ),
-    ].map((el) => new Text({ element: el }));
+    // this.texts = [
+    //   ...document.querySelectorAll(
+    //     '[data-a="char"],[data-a="word"],[data-a="line"]'
+    //   ),
+    // ].map((el) => new Text({ element: el }));
   }
 
   destroy() {

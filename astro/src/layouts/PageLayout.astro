@@ -1,11 +1,11 @@
 ---
-import "../style/type.css";
 import "../style/main.css";
 
 const { title } = Astro.props;
 
 import Canvas from "../components/Canvas.astro";
 import Meta from "src/components/Meta.astro";
+import Fonts from "src/components/Fonts.astro";
 ---
 
 <!DOCTYPE html>
@@ -15,9 +15,10 @@ import Meta from "src/components/Meta.astro";
     <meta name="viewport" content="width=device-width" />
     <Meta title={title} imageUrl={} description={} keyworks={} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <Fonts />
   </head>
 
-  <body>
+  <body class="bg-black text-white font-sohne">
     <div data-taxi>
       <main data-taxi-view class="Main">
         <slot />

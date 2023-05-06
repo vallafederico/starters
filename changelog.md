@@ -51,3 +51,9 @@
 
 - [x] ASTRO → updated
 - [x] GEN → better MOD in utlis
+
+# 06/05/23
+
+- [x] ASTRO → remove (comment) touch action none from body in main.css
+- [x] OGL → fix loader with GL (and keep it in scene/gl)
+- [x] WEBGL ALL → Check the import in app.js of .css file and remove

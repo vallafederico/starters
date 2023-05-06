@@ -1,4 +1,3 @@
-import "./style/main.css";
 import Dom from "@m/dom";
 import Viewport from "@m/viewport";
 import Gl from "./gl/gl";

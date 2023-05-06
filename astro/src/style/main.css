@@ -13,7 +13,7 @@
 html,
 body {
   overscroll-behavior: none;
-  touch-action: none;
+  /* touch-action: none; */
 }
 
 html,

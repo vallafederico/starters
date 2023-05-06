@@ -2,12 +2,12 @@ import { ASSETS } from "../../assets/";
 import { loadTexture } from "./texture-loader";
 
 export default class {
-  constructor(data) {
-    this.data = data;
+  constructor(gl) {
+    this.gl = gl;
   }
 
   async load() {
-    // const [diffuse] = await Promise.all([loadTexture(assets.tx)]);
+    // const [diffuse] = await Promise.all([loadTexture(this.gl, assets.tx)]);
     // return {
     //   diffuse,
     //   ratio:

@@ -14,8 +14,8 @@ module.exports = {
     },
     extend: {
       spacing: {
-        // gy1: "1.618rem",
-        // gx1: "1.618rem",
+        gx: "5vw",
+        gy: "2rem",
         // '13': '3.25rem',
       },
       aspectRatio: {

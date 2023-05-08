@@ -57,3 +57,10 @@
 - [x] ASTRO → remove (comment) touch action none from body in main.css
 - [x] OGL → fix loader with GL (and keep it in scene/gl)
 - [x] WEBGL ALL → Check the import in app.js of .css file and remove
+- [x] VITE → update lenis dependency and code
+- [x] GENERIC → Transform class to be tweakable
+- [x] OGL → check canvas selector and uniform all webgl with that (also astro)
+- [x] THREE (ALL) → rename devicepixelratio in viewport
+- [x] GENERIC → Add things from gist to appropriate places
+
+- [x] add deps to degit src

@@ -1,5 +1,5 @@
 import { Text } from "./animation/text";
-import { Transform } from "./animation/transform";
+import { Track } from "../util/track";
 
 export class Dom {
   constructor() {

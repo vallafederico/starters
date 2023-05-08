@@ -3,16 +3,16 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
 // import Loader from "./util/loader.js";
 
-import Viewport from "./viewport.js";
+import Viewport from "./util/viewport.js";
 import Scene from "./scene.js";
-import Camera from "./camera.js";
+import Camera from "./_camera.js";
 
 export class Gl {
   constructor(sel) {
     this.vp = new Viewport();
     this.renderer = new WebGLRenderer({});
 
-    this.renderer.setPixelRatio(this.vp.pixelRatio);
+    this.renderer.setPixelRatio(this.vp.dpr);
     this.renderer.setSize(this.vp.w, this.vp.h);
     this.renderer.setClearColor(0x000000, 1);
     this.vp.container.appendChild(this.renderer.domElement);

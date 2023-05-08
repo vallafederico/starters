@@ -1,5 +1,5 @@
 import { Mesh, PlaneGeometry } from "three";
-import PlaneMaterial from "./mat/raw/";
+import PlaneMaterial from "./mat/raw";
 
 export default class extends Mesh {
   constructor(data = {}) {

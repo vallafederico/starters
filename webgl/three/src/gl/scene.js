@@ -1,5 +1,5 @@
 import { Scene } from "three";
-import Quad from "./quad.js";
+import Quad from "./_quad.js";
 
 export default class extends Scene {
   constructor(data = {}) {

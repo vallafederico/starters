@@ -9,11 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^3.1.0",
-    "vite-plugin-glsl": "^0.4.0"
+    "vite": "^4.3.5",
+    "vite-plugin-glsl": "^1.1.2"
   },
   "dependencies": {
-    "ogl": "^0.0.101",
+    "ogl": "^0.0.116",
     "tiny-emitter": "^2.1.0"
   }
 }

@@ -1,9 +1,9 @@
-import { clientRect } from "../../util/clientRect.js";
-import { map, clamp, lerp } from "../../util/math.js";
+import { clientRect } from "./clientRect.js";
+import { map, clamp, lerp } from "./math.js";
 
-export class Transform {
+export class Track {
   constructor({ element, config }) {
-    this.el = element;
+    this.element = element;
 
     this.config = {
       bounds: [0, 1],
@@ -17,7 +17,7 @@ export class Transform {
   }
 
   resize() {
-    this.bounds = computeBounds(this.el, this.config);
+    this.bounds = computeBounds(this.element, this.config);
   }
 
   render() {

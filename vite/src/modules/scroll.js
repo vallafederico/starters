@@ -9,16 +9,16 @@ export class Scroll extends Lenis {
   constructor() {
     super({
       duration: 1,
-      smooth: true,
+      smoothWheel: true,
       easing: easeOutExpo,
-      direction: "vertical",
+      orientation: "vertical",
       smoothTouch: false,
       touchMultiplier: 2,
     });
 
     this.isActive = true;
-    this.timeFactor = 10;
-    this.time = 0;
+
+    // this.time = 0;
 
     this.init();
     window.sscroll = this;
@@ -49,10 +49,10 @@ export class Scroll extends Lenis {
 
   resize() {}
 
-  render() {
+  render(t) {
     if (!this.isActive) return;
 
-    this.raf((this.time += this.timeFactor));
+    this.raf(t);
   }
 
   /**

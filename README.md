@@ -33,6 +33,10 @@ degit vallafederico/starters/vite
 degit vallafederico/starters/vite/src
 ```
 
+```console
+pnpm install @studio-freight/lenis @unseenco/taxi gsap tiny-emitter
+```
+
 ### Generators
 
 #### Astro
@@ -50,7 +54,11 @@ degit vallafederico/starters/webgl/three/
 ```
 
 ```console
-degit vallafederico/starters/webgl/three/src/gl
+degit vallafederico/starters/webgl/three/src/gl;
+```
+
+```console
+pnpm install tiny-emitter three
 ```
 
 #### Ogl
@@ -63,6 +71,10 @@ degit vallafederico/starters/webgl/ogl/
 degit vallafederico/starters/webgl/ogl/src/gl
 ```
 
+```console
+pnpm install tiny-emitter ogl
+```
+
 #### Twgl
 
 ```console
@@ -71,6 +83,10 @@ degit vallafederico/starters/webgl/twgl/
 
 ```console
 degit vallafederico/starters/webgl/twgl/src/gl
+```
+
+```console
+pnpm install twgl.js
 ```
 
 ### Webflow

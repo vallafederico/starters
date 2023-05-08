@@ -1,10 +1,10 @@
-import { Renderer, Orbit } from "ogl";
+import { Renderer, Orbit, Vec3 } from "ogl";
 import Cam from "./_camera.js";
 import Scene from "./_scene.js";
 
 export default class {
   constructor() {
-    this.wrapper = document.getElementById("c");
+    this.wrapper = document.querySelector("[data-gl='c']");
     this.vp = {
       dpr: Math.min(window.devicePixelRatio, 2),
     };
@@ -19,12 +19,13 @@ export default class {
     this.camera.position.set(0, 0, 5);
 
     // this.camera.lookAt([0, 0, 0]);
-    // this.controls = new Orbit(this.camera);
+    // this.controls = new Orbit(this.camera, {
+    //   target: new Vec3(0, 0, 0),
+    // });
 
     this.scene = new Scene(this.gl);
     this.time = 0;
 
-    this.resize();
     this.initEvents();
 
     this.render();
@@ -33,8 +34,8 @@ export default class {
   render(scroll = 0) {
     this.time += 0.5;
 
-    if (this.controls) this.controls.update();
-    if (this.scene) this.scene.render(this.time);
+    this.controls?.update();
+    this.scene?.render(this.time);
 
     window.requestAnimationFrame(this.render.bind(this));
 

@@ -34,9 +34,9 @@ class App {
     this.dom?.resize();
   }
 
-  render() {
+  render(t) {
     // this.time += 0.1;
-    this.scroll?.render();
+    this.scroll?.render(t);
     this.dom?.render();
 
     window.requestAnimationFrame(this.render.bind(this));

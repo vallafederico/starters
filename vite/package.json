@@ -9,13 +9,13 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^3.1.0",
-    "vite-plugin-glsl": "^0.4.0"
+    "vite": "^4.3.5",
+    "vite-plugin-glsl": "^1.1.2"
   },
   "dependencies": {
-    "@studio-freight/lenis": "^0.2.13",
-    "@unseenco/taxi": "^1.2.0",
-    "gsap": "npm:@gsap/shockingly@^3.11.3",
+    "@studio-freight/lenis": "^1.0.12",
+    "@unseenco/taxi": "1.2.2",
+    "gsap": "npm:@gsap/shockingly@^3.11.5",
     "tiny-emitter": "^2.1.0"
   }
 }

@@ -2,7 +2,7 @@ export default class {
   constructor(sel = "c") {
     this.w = window.innerWidth;
     this.h = window.innerHeight;
-    this.pixelRatio = Math.min(window.devicePixelRatio, 2);
+    this.dpr = Math.min(window.devicePixelRatio, 2);
     this.container = document.querySelector('[data-gl="c"]');
   }
 

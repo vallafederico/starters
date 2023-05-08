@@ -1,5 +1,3 @@
-// fix scroll value based on picked boilerplate
-
 export const clientRect = (element) => {
   const bounds = element.getBoundingClientRect();
 
@@ -7,14 +5,27 @@ export const clientRect = (element) => {
   scroll = window.app?.scroll?.y || window.pageYOffset;
 
   return {
-    bottom: bounds.bottom + scroll,
-    height: bounds.height,
-    // left: bounds.left,
-    // right: bounds.right,
+    // screen
     top: bounds.top + scroll,
-    // width: bounds.width,
+    bottom: bounds.bottom + scroll,
+    width: bounds.width,
+    height: bounds.height,
+    left: bounds.left,
+    right: bounds.right,
     wh: window.innerHeight,
-    // ww: window.innerWidth,
+    ww: window.innerWidth,
     offset: bounds.top + scroll,
+    // centery: bounds.top + scroll + bounds.height / 2, // check if correct
+    // centerx: bounds.left + bounds.width / 2, // check if correct
   };
+};
+
+// to check
+export const clientRectGl = (element, ratio = 1) => {
+  const bounds = element.clientRect();
+
+  for (const [key, value] of Object.entries(bounds))
+    bounds[key] = value * ratio;
+
+  return bounds;
 };

@@ -5,7 +5,7 @@ import { Scene } from "./scene";
 
 export default class {
   constructor() {
-    this.canvas = document.getElementById("c");
+    this.canvas = document.querySelector("[data-gl='c']");
     this.gl = this.canvas.getContext("webgl");
     this.gl.clearColor(0.04, 0.04, 0.04, 1);
     //this.gl.enable(this.gl.CULL_FACE);

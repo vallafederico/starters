@@ -4,7 +4,6 @@ import {
   setUniforms,
   setBuffersAndAttributes,
   drawBufferInfo,
-  setUniforms,
 } from "twgl.js";
 
 import shaders from "../mat/fsq/index.js";

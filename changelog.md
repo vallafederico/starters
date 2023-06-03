@@ -64,3 +64,9 @@
 - [x] GENERIC → Add things from gist to appropriate places
 
 - [x] add deps to degit src
+
+# 03/06/23
+
+- [x] ASTRO → fix tailwind fontù
+- [x] TWGL → remove double import from fsq
+- [x] TWGL → fix canvas selector in `gl`

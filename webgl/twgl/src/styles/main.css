@@ -1,20 +1,19 @@
-
 * {
-  margin:0;
-  padding:0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 canvas {
-  display:block;
+  display: block;
 }
 
-#c {
-  width:100vw;
-  height:100vh;
-  position:fixed;
-  top:0;
-  left:0;
+[data-gl="c"] {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: -1;
 }
 
@@ -22,24 +21,20 @@ canvas {
 
 #content {
   /* border: 3px solid red; */
-  width:100vw;
-  height:100vh;
-  position:fixed;
-  top:0;
-  left:0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1;
 }
 
-.placeh{
+.placeh {
   border: 2px solid white;
   margin: 10vw;
   width: 300px;
   height: 300px;
-
 }
-
-
-
 
 /* NOTES ***************************************************************
 

@@ -80,3 +80,7 @@ body {
 [data-a="transform"] {
   border: 1px solid pink;
 }
+
+[data-track] {
+  border: 1px solid pink;
+}

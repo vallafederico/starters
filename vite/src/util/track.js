@@ -1,8 +1,10 @@
 import { clientRect } from "./clientRect.js";
 import { map, clamp, lerp } from "./math.js";
+import { Observe } from "./observe.js";
 
-export class Track {
-  constructor({ element, config }) {
+export class Track extends Observe {
+  constructor({ element, config, cb, addClass }) {
+    super({ element, config, cb, addClass });
     this.element = element;
 
     this.config = {
@@ -14,6 +16,8 @@ export class Track {
 
     this.value = 0;
     this.resize();
+
+    if (window.sscroll) window.sscroll.subscribe(this.render.bind(this));
   }
 
   resize() {

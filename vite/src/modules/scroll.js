@@ -17,6 +17,7 @@ export class Scroll extends Lenis {
     });
 
     this.isActive = true;
+    this.callbacks = [];
 
     // this.time = 0;
 
@@ -35,6 +36,8 @@ export class Scroll extends Lenis {
       this.max = limit || window.innerHeight;
       this.speed = velocity || 0;
       this.percent = progress || 0;
+
+      this.callbackRaf();
     });
   }
 
@@ -55,10 +58,24 @@ export class Scroll extends Lenis {
     this.raf(t);
   }
 
-  /**
-   * @param {boolean} value
-   */
   set active(value) {
     this.isActive = value;
+  }
+
+  callbackRaf() {
+    // call this in scroll method
+    this.callbacks.forEach((cb) => cb());
+  }
+
+  subscribe(callback) {
+    this.callbacks.push(callback);
+  }
+
+  unsubscribe(callback) {
+    this.callbacks = this.callbacks.filter((cb) => cb !== callback);
+  }
+
+  unsunbscribeAll() {
+    this.callbacks = [];
   }
 }

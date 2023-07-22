@@ -70,3 +70,31 @@
 - [x] ASTRO → fix tailwind fontù
 - [x] TWGL → remove double import from fsq
 - [x] TWGL → fix canvas selector in `gl`
+
+# --
+
+- [x] MATH → modulo in math functions
+- [x] WEBGL ALL → Check the import in `app.js` of `.css` file and remove
+- [x] ASTRO → remove (comment) touch action none from body in `main.css`
+- [x] OGL → fix loader with GL (and keep it in scene/gl)
+- [x] VITE → update lenis dependency and code
+- [x] GENERIC → Transform class to be tweakable
+- rename to track
+- coherent el / element naming for params
+- params default
+- [x] OGL → check canvas selector and uniform all webgl with that (also astro)
+- [x] THREE (ALL) → rename devicepixelratio in viewport
+- [x] ALL → add dependencies close to degit
+- [x] GENERIC → Add things from gist to appropriate places
+- [x] ASTRO → fix tailwind fontù
+- [x] TWGL → remove double import from fsq
+- [x] TWGL → fix canvas selector in `gl`
+
+# 22/97/23
+
+- [x] WEBGL ALL → chunks and chunks functions should be named as the file is
+- [x] VITE → observe class unsubscribe emitter on destroy
+- [x] VITE → clientRect to have bottom enabled by default
+- [x] VITE → `track` to extend Observe
+- [x] VITE → scroll to be subscribable (and treack to subscribe by default if exist)
+- [x] VITE → observe class should optionally take callbacks (!!!)

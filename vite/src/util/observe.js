@@ -1,7 +1,7 @@
 import Emitter from "tiny-emitter";
 
 export class Observe extends Emitter {
-  constructor({ element, config, addClass }) {
+  constructor({ element, config, addClass, cb }) {
     super();
     this.element = element;
     this.config = {
@@ -9,6 +9,8 @@ export class Observe extends Emitter {
       margin: config?.margin || "10px",
       threshold: config?.threshold || 0,
     };
+
+    if (cb) this.cb = cb;
 
     if (addClass !== undefined) this.addClass = addClass;
     this.init();
@@ -25,7 +27,7 @@ export class Observe extends Emitter {
         });
       },
       {
-        // root: this.config.root,
+        root: this.config.root,
         rootMargin: this.config.margin,
         threshold: this.config.threshold,
       }
@@ -40,8 +42,8 @@ export class Observe extends Emitter {
         });
       },
       {
-        // root: document.querySelector('#scrollArea'),
-        rootMargin: "000px",
+        root: this.config.root,
+        rootMargin: "0px",
         threshold: 0,
       }
     );
@@ -55,18 +57,24 @@ export class Observe extends Emitter {
   stop() {
     this.in.unobserve(this.element);
     this.out.unobserve(this.element);
+    this.off("IN");
+    this.off("OUT");
   }
 
   isIn() {
     // console.log("in");
-    if (this.addClass) this.element.classList.add(this.addClass);
     this.emit("IN");
+
+    if (this.cb?.in) this.cb.in();
+    if (this.addClass) this.element.classList.add(this.addClass);
   }
 
   isOut() {
     // console.log("out");
-    if (this.addClass) this.element.classList.remove(this.addClass);
     this.emit("OUT");
+
+    if (this.cb?.out) this.cb.out();
+    if (this.addClass) this.element.classList.remove(this.addClass);
   }
 }
 

@@ -9,7 +9,7 @@ export class Dom {
   resize() {}
 
   render(t) {
-    this.track?.render();
+    // this.track?.render();
   }
 
   create() {
@@ -18,6 +18,16 @@ export class Dom {
     //     '[data-a="char"],[data-a="word"],[data-a="line"]'
     //   ),
     // ].map((el) => new Text({ element: el }));
+
+    const track = document.querySelector("[data-track]");
+    if (track)
+      this.track = new Track({
+        element: track,
+        cb: {
+          in: () => console.log("in"),
+          out: () => console.log("out"),
+        },
+      });
   }
 
   destroy() {

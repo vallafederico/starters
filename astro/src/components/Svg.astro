@@ -1,0 +1,33 @@
+---
+let { size } = Astro.props.props;
+if (size === undefined) size = "w-[5rem]";
+
+const style = `
+    aspect-square 
+    ${size}
+`;
+---
+
+<div class={style}>
+    <slot />
+</div>
+
+
+
+<!--
+
+// ./SomeSvg.Astro
+---
+import Svg from "./Svg.astro";
+
+let { color } = Astro.props;
+if (color === undefined) color = "#fff";
+---
+
+<Svg props={Astro.props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill={color} stroke={color}>
+			
+    </svg>
+</Svg>
+
+-->

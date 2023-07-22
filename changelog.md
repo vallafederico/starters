@@ -98,3 +98,6 @@
 - [x] VITE → `track` to extend Observe
 - [x] VITE → scroll to be subscribable (and treack to subscribe by default if exist)
 - [x] VITE → observe class should optionally take callbacks (!!!)
+- [x] SANITY → Add API folder
+- [x] SANITY → add integration folder /astro + components (?)
+- [x] ASTRO → fix prettier

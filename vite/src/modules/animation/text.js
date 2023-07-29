@@ -4,13 +4,13 @@ import { SplitText } from "gsap/SplitText";
 gsap.registerPlugin(SplitText);
 
 export class Text extends Observe {
-  constructor({ element, anim }) {
+  constructor({ element, anim, params, once = false }) {
     super({
       element,
       config: {
         root: null,
-        margin: "10px",
-        threshold: 0.8,
+        margin: "0px",
+        threshold: 0.5,
       },
       addClass: "active",
     });
@@ -19,7 +19,6 @@ export class Text extends Observe {
       d: 1.2,
       ease: "expo.out",
       delay: 0.1,
-      once: false,
       stagger: {
         each: 0.05,
         from: "start",
@@ -32,9 +31,12 @@ export class Text extends Observe {
         y: "0%",
       },
       out: {
-        y: "200%",
+        y: "150%",
       },
+      ...params,
     };
+
+    this.once = once;
 
     this.element = element;
     this.animated = returnSplit(this.element);
@@ -55,13 +57,7 @@ export class Text extends Observe {
     if (this.animation) this.animation.kill();
     this.animation = gsap.to(this.animated, {
       ...this.params.in,
-      duration: this.anim.d,
-      ease: this.anim.ease,
-      delay: this.anim.delay,
-      stagger: {
-        each: this.anim.stagger.each,
-        from: this.anim.stagger.from,
-      },
+      ...this.anim,
     });
   }
 
@@ -70,13 +66,8 @@ export class Text extends Observe {
     if (this.animation) this.animation.kill();
     this.animation = gsap.to(this.animated, {
       ...this.params.in,
-      duration: this.anim.d,
-      ease: this.anim.ease,
+      ...this.anim,
       delay: 0,
-      stagger: {
-        each: this.anim.each,
-        from: this.anim.from,
-      },
     });
   }
 

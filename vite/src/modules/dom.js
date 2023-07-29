@@ -1,5 +1,6 @@
 import { Text } from "./animation/text";
 import { Track } from "../util/track";
+import { Alpha } from "./animation/alpha";
 
 export class Dom {
   constructor() {
@@ -13,11 +14,15 @@ export class Dom {
   }
 
   create() {
-    // this.texts = [
-    //   ...document.querySelectorAll(
-    //     '[data-a="char"],[data-a="word"],[data-a="line"]'
-    //   ),
-    // ].map((el) => new Text({ element: el }));
+    this.texts = [
+      ...document.querySelectorAll(
+        '[data-a="char"],[data-a="word"],[data-a="line"]'
+      ),
+    ].map((el) => new Text({ element: el }));
+
+    this.alpha = new Alpha({
+      element: document.querySelector("[data-a='alpha']"),
+    });
 
     const track = document.querySelector("[data-track]");
     if (track)

@@ -4,5 +4,8 @@
   "description": "mixed scaffolds and boilerplate code",
   "main": "index.js",
   "author": "vallafederico",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "vite": "cd vite && pnpm dev"
+  }
 }

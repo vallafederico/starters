@@ -86,11 +86,11 @@
 - [x] THREE (ALL) → rename devicepixelratio in viewport
 - [x] ALL → add dependencies close to degit
 - [x] GENERIC → Add things from gist to appropriate places
-- [x] ASTRO → fix tailwind fontù
+- [x] ASTRO → fix tailwind font
 - [x] TWGL → remove double import from fsq
 - [x] TWGL → fix canvas selector in `gl`
 
-# 22/97/23
+# 22/07/23
 
 - [x] WEBGL ALL → chunks and chunks functions should be named as the file is
 - [x] VITE → observe class unsubscribe emitter on destroy
@@ -101,3 +101,9 @@
 - [x] SANITY → Add API folder
 - [x] SANITY → add integration folder /astro + components (?)
 - [x] ASTRO → fix prettier
+
+# 29/07/23
+
+- [x] setup scripts in package json
+- [x] VITE → Fix Alpha Basic Class
+- [x] SANITY → Fix Image utils to auto convert to webp and optimise

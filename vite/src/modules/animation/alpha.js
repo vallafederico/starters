@@ -4,23 +4,24 @@ import { Observe } from "../../util/observe";
 // NEEDS CHECKING!
 
 export class Alpha extends Observe {
-  constructor({ element, anim }) {
+  constructor({ element, anim, params, once = false }) {
     super({
       element,
       config: {
         root: null,
-        margin: "10px",
-        threshold: 0.8,
+        margin: "0px",
+        threshold: 0.5,
       },
     });
 
     this.anim = {
-      d: 1.2,
+      duration: 1.2,
       ease: "expo.out",
       delay: 0.1,
-      each: 0.05,
-      from: "start",
-      once: false,
+      stagger: {
+        each: 0.05,
+        from: "start",
+      },
       ...anim,
     };
 
@@ -29,9 +30,12 @@ export class Alpha extends Observe {
         autoAlpha: 1,
       },
       out: {
-        autoAlpha: 1,
+        autoAlpha: 0,
       },
+      ...params,
     };
+
+    this.once = once;
 
     this.element = element;
     this.animated = this.element;
@@ -39,7 +43,7 @@ export class Alpha extends Observe {
 
   isIn() {
     this.animateIn();
-    if (this.anim.once) this.stop();
+    if (this.once) this.stop();
   }
 
   isOut() {
@@ -50,9 +54,7 @@ export class Alpha extends Observe {
     if (this.animation) this.animation.kill();
     this.animation = gsap.to(this.animated, {
       ...this.params.in,
-      duration: this.anim.d,
-      ease: this.anim.ease,
-      delay: this.anim.delay,
+      ...this.anim,
     });
   }
 
@@ -61,19 +63,17 @@ export class Alpha extends Observe {
     if (this.animation) this.animation.kill();
     this.animation = gsap.to(this.animated, {
       ...this.params.out,
-      duration: this.anim.d,
-      ease: this.anim.ease,
-      delay: 0,
+      ...this.anim,
     });
   }
 
   setIn() {
     if (this.animation) this.animation.kill();
-    gsap.set(this.animated, { ...this.params.out });
+    gsap.set(this.animated, { ...this.params.in });
   }
 
   setOut() {
     if (this.animation) this.animation.kill();
-    gsap.set(this.animated, { autoAlpha: 0 });
+    gsap.set(this.animated, { ...this.params.out });
   }
 }

@@ -111,3 +111,5 @@
 # 22/08/23
 
 - [x] Sanity → Updates (to be checked!)
+- [x] VITE → fix splittext class to be revertable (thanks) and better line split
+- [x] THREE → texture loader ratio and size trick

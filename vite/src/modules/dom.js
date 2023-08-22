@@ -29,10 +29,18 @@ export class Dom {
       this.track = new Track({
         element: track,
         cb: {
-          in: () => console.log("in"),
-          out: () => console.log("out"),
+          // in: () => console.log("in"),
+          // out: () => console.log("out"),
         },
       });
+
+    this.start();
+  }
+
+  start() {
+    this.texts.forEach((text) => text.start());
+    this.alpha.start();
+    this.track?.start();
   }
 
   destroy() {
@@ -41,7 +49,7 @@ export class Dom {
 
   /* --  Pages */
   transitionOut(page) {
-    // console.log("DOM•tranOut", page);
+    // console.log("DOM::transitionOut", page);
 
     return new Promise((resolve) => {
       setTimeout(() => {
@@ -51,7 +59,7 @@ export class Dom {
   }
 
   transitionIn(page) {
-    // console.log("DOM•tranIn", page);
+    // console.log("DOM::transitionIn", page);
 
     return new Promise((resolve) => {
       setTimeout(() => {

@@ -11,6 +11,7 @@ export class Text extends Observe {
         root: null,
         margin: "0px",
         threshold: 0.5,
+        autoStart: false,
       },
       addClass: "active",
     });
@@ -38,10 +39,22 @@ export class Text extends Observe {
 
     this.once = once;
 
+    if (element.dataset.a === "lines") this.revertTo = this.element.textContent;
+
+    this.create(element);
+    this.setOut();
+  }
+
+  create(element) {
     this.element = element;
     this.animated = returnSplit(this.element);
+  }
 
-    this.setOut();
+  resize() {
+    if (!this.revertTo) return;
+    this.element.textContent = this.revertTo;
+    this.create();
+    this.animateIn();
   }
 
   isIn() {
@@ -110,10 +123,18 @@ function splitWord(el) {
   }).words;
 }
 function splitLine(el) {
-  const line = new SplitText(el, {
+  const split = new SplitText(el, {
     type: "lines",
-  }).lines;
-  return new SplitText(line, {
-    type: "lines",
-  }).lines;
+  });
+
+  // store.push(split)
+  split.lines.forEach((line) => wrapEl(line));
+
+  return split.lines;
+}
+
+function wrapEl(el) {
+  const wrapper = document.createElement("div");
+  el.parentNode.insertBefore(wrapper, el);
+  wrapper.appendChild(el);
 }

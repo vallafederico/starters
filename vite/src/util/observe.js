@@ -8,13 +8,14 @@ export class Observe extends Emitter {
       root: config?.root || null,
       margin: config?.margin || "10px",
       threshold: config?.threshold || 0,
+      autoStart: config?.autoStart || false,
     };
 
     if (cb) this.cb = cb;
 
     if (addClass !== undefined) this.addClass = addClass;
     this.init();
-    this.start();
+    if (this.config.autoStart) this.start();
   }
 
   init() {

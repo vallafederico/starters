@@ -107,3 +107,7 @@
 - [x] setup scripts in package json
 - [x] VITE → Fix Alpha Basic Class
 - [x] SANITY → Fix Image utils to auto convert to webp and optimise
+
+# 22/08/23
+
+- [x] Sanity → Updates (to be checked!)

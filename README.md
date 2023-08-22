@@ -111,6 +111,14 @@ Minimal Fork From [Fs Dev Starter](https://github.com/finsweet/developer-starter
 degit vallafederico/starters/webflow/full
 ```
 
+### CMS
+
+#### Sanity
+
+```console
+degit vallafederico/starters/sanity
+```
+
 ---
 
 ##### Secrets

@@ -113,10 +113,22 @@ degit vallafederico/starters/webflow/full
 
 ### CMS
 
-#### Sanity
+#### Sanity — Full
 
 ```console
 degit vallafederico/starters/sanity
+```
+
+#### Sanity — Schemas
+
+```console
+degit vallafederico/starters/sanity/schemas
+```
+
+#### Sanity — Api
+
+```console
+degit vallafederico/starters/sanity/api
 ```
 
 ---

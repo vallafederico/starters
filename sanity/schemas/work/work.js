@@ -35,19 +35,6 @@ export default {
       title: 'Body',
       type: 'blockContent',
     },
-    {
-      name: 'tag',
-      title: 'Tag',
-      type: 'string',
-      initialValue: 'single',
-      options: {
-        list: [
-          {title: 'Single', value: 'single'},
-          {title: 'Multi', value: 'multi'},
-          // {title: 'Multi', value: 'multi'},
-        ],
-      },
-    },
   ],
 
   preview: {

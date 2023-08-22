@@ -1,34 +1,35 @@
-import { useSanityClient, groq } from "astro-sanity";
+import {useSanityClient, groq} from 'astro-sanity'
+import {resolveLinks} from './deref.js'
 
-/** -- Generic Queries */
-// export async function getSetting() {
-//   const query = groq`*[_type == "settings"]`;
-//   const settings = await useSanityClient().fetch(query);
-//   return settings;
+// export async function getRef(ref) {
+//   const query = groq`*[_id == '${ref}']`
+//   const data = await useSanityClient().fetch(query)
+//   return data
 // }
 
 export async function getType(type) {
-  const query = groq`*[_type == "${type}"]`;
-  const settings = await useSanityClient().fetch(query);
-  return settings;
+  const query = groq`*[_type == "${type}"]`
+  const data = await useSanityClient()
+    .fetch(query)
+    // deref
+    .then(async (data) => {
+      await resolveLinks(data)
+      return data
+    })
+
+  return data
 }
 
-export async function getRef(ref) {
-  const query = groq`*[_id == '${ref}']`;
-  const settings = await useSanityClient().fetch(query);
-  return settings;
-}
-
-/** -- Astro */
-export async function getPages() {
-  const data = await getChar();
+/** -- --  Astro */
+export async function getPages(name) {
+  const data = await getType(name)
 
   return data.map((d) => {
     return {
-      params: { smth: char.slug.current },
+      params: {smth: data.slug.current},
       props: d,
-    };
-  });
+    }
+  })
 }
 
 /**
@@ -36,7 +37,7 @@ export async function getPages() {
  */
 
 export async function getStaticPaths() {
-  const data = await getPages();
+  const data = await getPages()
   //   data.forEach((item, i) => {
   //     // console.log(item)
   //     if (i === 9) {
@@ -46,7 +47,7 @@ export async function getStaticPaths() {
   //     }
   //   });
 
-  return data;
+  return data
 }
 
 // const { smth } = Astro.params;

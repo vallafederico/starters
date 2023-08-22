@@ -1,12 +1,16 @@
+import {pageDefaultsSeo, pageDefaultsGroup} from '../_defaults.js'
+
 export default {
   name: 'settings',
   title: 'Settings',
   type: 'document',
+  groups: [...pageDefaultsGroup],
   fields: [
-    {
-      name: 'head',
-      title: 'Head',
-      type: 'head',
-    },
+    ...pageDefaultsSeo,
+    // {
+    //   name: 'random',
+    //   title: 'random',
+    //   type: 'image',
+    // },
   ],
 }

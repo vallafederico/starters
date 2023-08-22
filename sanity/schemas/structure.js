@@ -1,6 +1,6 @@
-import { MdSettings } from "react-icons/md";
-import { IoShareSocial } from "react-icons/io5";
-import { BiSolidShareAlt } from "react-icons/bi";
+import {MdSettings} from 'react-icons/md'
+// import {IoShareSocial} from 'react-icons/io5'
+// import {BiSolidShareAlt} from 'react-icons/bi'
 
 // prettier-ignore
 export const structure = (S) => {
@@ -23,9 +23,9 @@ export const structure = (S) => {
       (listItem) => 
           ![
           'settings',
-            'social',
-          'ctaSettings', 
-            'socialIcons'
+          // 'social',
+          // 'ctaSettings', 
+          // 'socialIcons'
               // ...
         ].includes(listItem.getId())),
         S.divider(),
@@ -36,9 +36,9 @@ export const structure = (S) => {
             S.list()
               .title('Settings')
               .items([
-                singlePage('CTA Settings', 'ctaSettings', null, 'ctaSettings'), 
+                // singlePage('CTA Settings', 'ctaSettings', null, 'ctaSettings'), 
+                // singlePage('Social Media', 'socialIcons', BiSolidShareAlt, 'socialIcons'),
                 singlePage('Site Settings', 'settings', null, 'settingds'), 
-                singlePage('Social Media', 'socialIcons', BiSolidShareAlt, 'socialIcons')
               ]),
       ),
 

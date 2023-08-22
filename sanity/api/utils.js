@@ -1,9 +1,9 @@
-import { useSanityClient } from "astro-sanity";
-import { createImageBuilder } from "astro-sanity";
+import {useSanityClient} from 'astro-sanity'
+import {createImageBuilder} from 'astro-sanity'
 // import { portableTextToHtml } from "astro-sanity";
 
 // imageBuilder
-export const imageBuilder = createImageBuilder(useSanityClient());
+export const imageBuilder = createImageBuilder(useSanityClient())
 
 /* ---- Sanity Image Builder ----
 .size(w | 0, (h / aspectRatio) | 0)
@@ -14,11 +14,11 @@ export const imageBuilder = createImageBuilder(useSanityClient());
 */
 
 export function urlForImage(source) {
-  return imageBuilder.image(source).auto("format").quality(77);
+  return imageBuilder.image(source).auto('format').quality(77)
 }
 
-export function getSrc(image) {
-  if (image) return urlForImage(image).url();
-}
+// export function getSrc(image) {
+//   if (image) return urlForImage(image).url();
+// }
 
 // ++++ add astro image pipeline

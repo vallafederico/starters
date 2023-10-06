@@ -1,17 +1,14 @@
-import regeneratorRuntime from "regenerator-runtime/runtime";
-import { Plane, Mesh } from "ogl";
+import { Mesh, Box } from "ogl";
 import Material from "./mat/_model";
 
 export default class extends Mesh {
-  constructor(gl, geometry = null) {
-    super(gl);
+  constructor(gl, geometry = new Box(gl)) {
+    super(gl, {
+      geometry: geometry,
+      program: new Material(gl),
+    });
+
     this.gl = gl;
-
-    this.geometry = geometry;
-    this.program = new Material(this.gl);
-
-    // this.mesh.position.x = 1;
-    // this.load();
   }
 
   resize() {}

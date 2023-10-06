@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "esbuild": "^0.15.15",
-    "esbuild-plugin-glsl": "^1.1.0"
+    "esbuild": "^0.19.4",
+    "esbuild-plugin-glsl": "^1.2.2"
   }
 }

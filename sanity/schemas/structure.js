@@ -39,9 +39,9 @@ export const structure = (S) => {
                 // singlePage('CTA Settings', 'ctaSettings', null, 'ctaSettings'), 
                 // singlePage('Social Media', 'socialIcons', BiSolidShareAlt, 'socialIcons'),
                 singlePage('Site Settings', 'settings', null, 'settingds'), 
+                
               ]),
       ),
-
   ])
 
 }

@@ -1,24 +1,22 @@
 import { Plane, Geometry, Mesh } from "ogl";
 import Material from "./mat/_insta";
 
-export default class extends Mesh {
-  constructor(gl, geomData) {
-    super(gl);
-    this.gl = gl;
-    this.geomData = geomData;
+export class Instance extends Mesh {
+  constructor(gl, num = 10, { attribs } = {}) {
+    if (!attribs) attribs = new Plane(gl).attributes;
 
-    this.numInstances = 10;
-    this.attribs = {
-      ...calcAttributes(this.numInstances),
-      ...this.geomData.attributes,
-    };
-    // console.log(this.attribs);
+    super(gl, {
+      geometry: new Geometry(gl, {
+        ...attribs,
+        ...calcAttributes(num),
+      }),
+      program: new Material(gl),
+    });
 
-    this.geometry = new Geometry(this.gl, this.attribs);
-    this.program = new Material(this.gl);
-    this.program.uniforms.uTarget = { value: 0 }; // add for picking
+    // this.gl = gl;
 
-    this.scale.set(0.2, 0.2, 0.2);
+    const scale = 0.2;
+    this.scale.set(scale, scale, scale);
   }
 
   resize() {}

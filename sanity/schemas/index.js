@@ -1,7 +1,8 @@
 import {pageTypes} from './pages'
-import {workTypes} from './work'
 import {mixTypes} from './mix'
 import {settingTypes} from './settings'
+
+import {workTypes} from './work'
 
 // prettier-ignore
 export const schemaTypes = [

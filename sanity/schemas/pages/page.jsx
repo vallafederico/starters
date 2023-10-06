@@ -1,9 +1,11 @@
 import {pageDefaultsSeo, pageDefaultsGroup} from '../_defaults.js'
+import {HiOutlineDocument} from 'react-icons/hi'
 
 export default {
   name: 'page',
   title: 'Pages',
   groups: [...pageDefaultsGroup],
+  icon: HiOutlineDocument,
 
   type: 'document',
   fields: [

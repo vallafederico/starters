@@ -19,14 +19,15 @@ export default class {
     this.camera.position.set(0, 0, 5);
 
     // this.camera.lookAt([0, 0, 0]);
-    // this.controls = new Orbit(this.camera, {
-    //   target: new Vec3(0, 0, 0),
-    // });
 
     this.scene = new Scene(this.gl);
     this.time = 0;
 
     this.initEvents();
+
+    this.controls = new Orbit(this.camera, {
+      target: new Vec3(0, 0, 0),
+    });
 
     this.render();
   }

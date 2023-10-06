@@ -7,11 +7,9 @@ export default class extends Program {
     super(gl, {
       vertex: vertex,
       fragment: fragment,
+      transparent: true,
+      cullFace: null,
     });
-
-    // console.log(this.uniforms);
-    this.transparent = null;
-    this.cullFace = null;
 
     this.uniforms = {
       u_time: { value: 0 },

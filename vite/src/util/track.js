@@ -2,6 +2,17 @@ import { clientRect } from "./clientRect.js";
 import { map, clamp, lerp } from "./math.js";
 import { Observe } from "./observe.js";
 
+/**
+ * Represents a track that observes an element and renders based on scroll position.
+ * @extends Observe
+ * @constructor
+ * @param {Object} options - The options for the track.
+ * @param {HTMLElement} options.element - The element to observe.
+ * @param {Object} options.config - The configuration options for the track.
+ * @param {Function} options.cb - The callback function to execute on render.
+ * @param {string} options.addClass - The class to add to the element on render.
+ */
+
 export class Track extends Observe {
   constructor({ element, config, cb, addClass }) {
     super({ element, config, cb, addClass });

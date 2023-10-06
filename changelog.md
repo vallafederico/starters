@@ -113,3 +113,17 @@
 - [x] Sanity → Updates (to be checked!)
 - [x] VITE → fix splittext class to be revertable (thanks) and better line split
 - [x] THREE → texture loader ratio and size trick
+
+# 06/09/23
+
+- [x] SANITY → Add concurrently setup in notes
+- [x] SAINTY → add ENV based config for project ID
+
+# 06/10/23
+
+- [x] WEBFLOW TINY → update esbuild.config (copy this from the webflow project)
+- [x] OGL → refactor transparency and cull face on materials
+- [x] OGL → refactor base geometries
+- [x] OGL → add instanced with wf technique
+- [x] OGL → remove regenerator runtime from \_model
+- [x] VITE → added definition to track and observe

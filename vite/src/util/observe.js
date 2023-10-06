@@ -1,6 +1,20 @@
 import Emitter from "tiny-emitter";
 
 export class Observe extends Emitter {
+  /**
+   * Creates an instance of Observe.
+   * @param {Object} options - The options object.
+   * @param {HTMLElement} options.element - The element to observe.
+   * @param {Object} [options.config] - The IntersectionObserver configuration options.
+   * @param {HTMLElement} [options.config.root=null] - The element that is used as the viewport for checking visibility of the target.
+   * @param {string} [options.config.margin='10px'] - Margin around the root element.
+   * @param {number} [options.config.threshold=0] - A threshold of 0.0 means that the target will be visible when it intersects with the root element.
+   * @param {boolean} [options.config.autoStart=false] - Whether to start observing the element automatically.
+   * @param {string} [options.addClass] - The CSS class to add to the element when it is in view.
+   * @param {Object} [options.cb] - The callback functions to execute when the element is in or out of view.
+   * @param {Function} [options.cb.in] - The function to execute when the element is in view.
+   * @param {Function} [options.cb.out] - The function to execute when the element is out of view.
+   */
   constructor({ element, config, addClass, cb }) {
     super();
     this.element = element;

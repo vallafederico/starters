@@ -9,7 +9,7 @@ export default defineConfig({
   name: 'default',
   title: 'starter-basic',
 
-  projectId: '',
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID,
   dataset: 'production',
 
   plugins: [deskTool({structure}), visionTool()],

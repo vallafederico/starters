@@ -24,4 +24,10 @@ pnpm install astro-sanity
 pnpm install walkjs --save-dev
 ```
 
+```json
+"cms": "cd cms && pnpm dev",
+"all": "concurrently \"pnpm cms\" \"pnpm dev\"",
+"sd": "cd cms && pnpm sanity deploy"
+```
+
 #### Config

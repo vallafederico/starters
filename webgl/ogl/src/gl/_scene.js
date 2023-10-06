@@ -1,6 +1,7 @@
 import { Transform } from "ogl";
 
-import Quad from "./_quad.js";
+import { Quad } from "./_quad.js";
+// import { Instance } from "./_instance.js";
 
 export default class extends Transform {
   constructor(gl, data = {}) {
@@ -20,7 +21,7 @@ export default class extends Transform {
   render(t) {
     if (!this.isOn) return;
     if (this.quad) this.quad.render(t);
-    if (this.quads) this.quads.forEach((item) => item.render(t));
+    // if (this.quads) this.quads.forEach((item) => item.render(t));
   }
 
   resize(vp) {

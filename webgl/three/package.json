@@ -13,7 +13,6 @@
     "vite-plugin-glsl": "^1.1.2"
   },
   "dependencies": {
-    "three": "^0.152.2",
-    "tiny-emitter": "^2.1.0"
+    "three": "^0.152.2"
   }
 }

@@ -34,7 +34,7 @@ degit vallafederico/starters/vite/src
 ```
 
 ```console
-pnpm install @studio-freight/lenis @unseenco/taxi gsap tiny-emitter
+pnpm install @studio-freight/lenis @unseenco/taxi tiny-emitter gsap@npm:@gsap/shockingl
 ```
 
 ### Generators

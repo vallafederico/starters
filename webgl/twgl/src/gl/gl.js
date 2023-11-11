@@ -4,6 +4,8 @@ import { Camera } from "./_camera";
 import { Scene } from "./scene";
 
 export default class {
+  time = 0;
+
   constructor() {
     this.canvas = document.querySelector("[data-gl='c']");
     this.gl = this.canvas.getContext("webgl");

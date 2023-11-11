@@ -8,7 +8,7 @@ canvas {
   display: block;
 }
 
-#c {
+[data-gl="c"] {
   width: 100vw;
   height: 100vh;
   position: fixed;

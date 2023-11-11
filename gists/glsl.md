@@ -63,3 +63,15 @@ float fresnelFunc(vec3 viewDirection, vec3 v_normal) {
 }
 
 ```
+
+## Effects
+
+#### Plane Scale
+
+```csharp
+float startAt = uv.x * .5;
+float prog = smoothstep(startAt, 1., u_center);
+vec2 scale = vec2(1. + prog);
+pos.xy = mix(pos.xy, pos.xy * 2., prog);
+
+```

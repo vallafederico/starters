@@ -24,8 +24,8 @@ export class Dom {
   }
 
   start() {
-    this.texts.forEach((text) => text.start());
-    this.alpha.start();
+    this.texts?.forEach((text) => text.start());
+    this.alpha?.start();
     this.track?.start();
   }
 

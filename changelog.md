@@ -127,3 +127,13 @@
 - [x] OGL → add instanced with wf technique
 - [x] OGL → remove regenerator runtime from \_model
 - [x] VITE → added definition to track and observe
+
+# 11/11/23
+
+- [x] WEBGL ALL → check and remove tiny emitter from deps
+- [x] WEBGL TWGL → add time initialisation in scene
+- [x] GISTS → vertex shader fluid scale
+- [x] VITE → Add lenis default to top of scroll
+- [x] VITE → fix `dom.js` start alpha to alpha?start()
+- [x] THREE → fix CSS for canvas
+- [x] README → change gsap install in vite BP to `gsap@npm:@gsap/shockingly` and put it at the end

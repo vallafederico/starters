@@ -137,3 +137,4 @@
 - [x] VITE → fix `dom.js` start alpha to alpha?start()
 - [x] THREE → fix CSS for canvas
 - [x] README → change gsap install in vite BP to `gsap@npm:@gsap/shockingly` and put it at the end
+- [x] SANITY/API -> fix image pipeline and add jsdoc

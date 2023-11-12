@@ -1,5 +1,8 @@
-import {useSanityClient, groq} from 'astro-sanity'
-import {resolveLinks} from './deref.js'
+import {urlForImage} from './utils.js'
+import {sanityClient} from 'sanity:client'
+// import { resolveLinks } from "./deref.js"
+
+export {urlForImage}
 
 // export async function getRef(ref) {
 //   const query = groq`*[_id == '${ref}']`
@@ -8,14 +11,13 @@ import {resolveLinks} from './deref.js'
 // }
 
 export async function getType(type) {
-  const query = groq`*[_type == "${type}"]`
-  const data = await useSanityClient()
-    .fetch(query)
-    // deref
-    .then(async (data) => {
-      await resolveLinks(data)
-      return data
-    })
+  const query = `*[_type == "${type}"]`
+  const data = await sanityClient.fetch(query)
+
+  // .then(async data => {
+  //   await resolveLinks(data)
+  //   return data
+  // })
 
   return data
 }
@@ -26,7 +28,7 @@ export async function getPages(name) {
 
   return data.map((d) => {
     return {
-      params: {smth: data.slug.current},
+      params: {card: d.slug.current},
       props: d,
     }
   })
@@ -36,8 +38,8 @@ export async function getPages(name) {
  *   /[...smth].astro
  */
 
-export async function getStaticPaths() {
-  const data = await getPages()
+export async function getStaticPaths(name) {
+  const data = await getPages(name)
   //   data.forEach((item, i) => {
   //     // console.log(item)
   //     if (i === 9) {

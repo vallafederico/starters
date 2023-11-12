@@ -1,5 +1,5 @@
 import {WalkBuilder, deepCopy} from 'walkjs'
-import {useSanityClient, groq} from 'astro-sanity'
+import {sanityClient} from 'sanity:client'
 
 export const resolveLinks = async (inputData, maxDepth = 3) => {
   const store = new Map()
@@ -63,7 +63,7 @@ export const resolveLinks = async (inputData, maxDepth = 3) => {
 
     if (ids.size) {
       // fetch all references at once
-      const documents = await useSanityClient().fetch(
+      const documents = await sanityClient.fetch(
         `*[_id in [${[...ids.keys()].map((id) => `'${id}'`).join(',')}]]{...}`
       )
       documents.forEach((element) => {

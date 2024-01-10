@@ -138,3 +138,7 @@
 - [x] THREE → fix CSS for canvas
 - [x] README → change gsap install in vite BP to `gsap@npm:@gsap/shockingly` and put it at the end
 - [x] SANITY/API -> fix image pipeline and add jsdoc
+
+# 10/01/24
+
+- [x] SANITY → new sanity boilerplate

@@ -1,16 +1,8 @@
-# Sanity Clean Content Studio
+import {defineCliConfig} from 'sanity/cli'
 
-## Secrets
-
-```js
 export default defineCliConfig({
   api: {
     projectId: process.env.SANITY_STUDIO_ID,
     dataset: 'production',
   },
 })
-```
-
-```md
-SANITY_STUDIO_ID="..."
-```

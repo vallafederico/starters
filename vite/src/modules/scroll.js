@@ -3,6 +3,15 @@ import { easeOutExpo } from "../util/easings.js";
 
 const lenisDefault = (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t));
 
+/*
+
+<script>
+  // reset scroll to 0 with no timeouts
+  history.scrollRestoration = "manual";
+</script>
+
+*/
+
 export class Scroll extends Lenis {
   constructor() {
     super({

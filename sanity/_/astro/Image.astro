@@ -1,0 +1,78 @@
+---
+import {urlFor} from '../index.js'
+
+// to be fixed and understood !!!!!!!
+
+
+const {src, mobileWidth, desktopWidth, width, height, alt, priority, className} = Astro.props
+
+// Empty image
+const emptyImage =
+  'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='
+
+// Split up sanity URL into pieces
+const [assetType, assetId, imageRes, fileType] =
+  src?.image && src.image.asset._ref.split('-')
+
+const crop = src.image.crop
+const [imageWidth, imageHeight] = imageRes.split('x').map((x) => parseInt(x))
+const quality = 77
+
+const w = Math.ceil(
+  crop ? (1 - crop.left - crop.right) * imageWidth : imageWidth
+)
+const h = Math.ceil(
+  crop ? (1 - crop.top - crop.bottom) * imageHeight : imageHeight
+)
+
+const aspectRatio = w / h
+
+// viewport widths that image sizes attribute will use
+const responsiveWidths = [20, 50, 100, 320, 640, 960, 1200, 1920, 2160]
+
+const imageUrl = urlFor(src.image.asset)
+  .size(w | 0, (w / aspectRatio) | 0)
+  .fit('crop')
+  .auto('format')
+  .quality(quality)
+  .url()
+
+const sizeLoader = () => {
+  var sizes = ''
+  responsiveWidths.forEach((width, index) => {
+    const w = width | 0
+    const h = (width / aspectRatio) | 0
+
+    const url = urlFor(src.image.asset)
+      .size(w, h)
+      .fit('crop')
+      .auto('format')
+      .quality(quality)
+
+      .url()
+
+    const string = `${url} ${width}w${
+      index + 1 === responsiveWidths.length ? '' : ', '
+    }`
+    sizes += string
+  })
+  return sizes
+}
+
+---
+
+<img
+  src={imageUrl || emptyImage}
+  width={Math.ceil(w)}
+  height={Math.ceil(h)}
+  class={className || ''}
+  loading={priority ? 'eager' : 'lazy'}
+  srcset={sizeLoader()}
+  sizes={
+    assetType === 'svg'
+      ? '100vw'
+      : `(max-width:767px) ${mobileWidth || 70}vw, ${desktopWidth || 100}vw`
+  }
+  decoding={priority ? 'sync' : 'async'}
+  alt={alt || (src ? src.alt : alt)}
+/>

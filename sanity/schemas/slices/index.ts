@@ -1,57 +1,17 @@
-import hero from './hero'
-import bigQuote from './bigQuote'
-import fullWidthText from './fullWidthText'
-import logoRow from './logoRow'
-import imageWithText from './imageWithText'
-import headingAndText from './headingAndText'
-import cta from './cta'
-import projectsList from './projectsList'
-import expandableList from './expandableList'
-import media from './media'
-import mediaCarousel from './mediaCarousel'
-import textSection from './textSection'
-// append
+// import hero from './hero'
+
 const sortAlpha = (a, b) => {
   return a.name.localeCompare(b.name)
 }
 
 const globalPageSlices = [
-  mediaCarousel,
-  media,
-  textSection,
-  cta,
-  expandableList,
-  projectsList,
-  headingAndText,
-  bigQuote,
-  logoRow,
-  imageWithText,
-  fullWidthText,
-  hero,
+  // hero,
 ]
 const contentPageSlices = [
-  mediaCarousel,
-  media,
-  textSection,
-  // cta,
-  // expandableList,
-  // projectsList,
-  // headingAndText,
-  // bigQuote,
-  // logoRow,
-  // imageWithText,
-  fullWidthText,
+  // hero,
 ]
 const homeSlices = [
-  hero,
-  cta,
-
-  expandableList,
-  fullWidthText,
-  headingAndText,
-  logoRow,
-  imageWithText,
-  bigQuote,
+  // hero,
 ]
 
 // Create page slices type that acts as a base for all types of slices to be dropped into

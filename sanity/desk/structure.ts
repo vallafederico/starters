@@ -53,7 +53,7 @@ export const structure = (S) => {
               pageList('Legal Pages', 'legal', MdGavel),
             ])
         ),
-      pageList('Lists', 'settings.lists', BsReverseListColumnsReverse),
+      // pageList('Lists', 'settings.lists', BsReverseListColumnsReverse),
       S.divider(),
       S.listItem()
         .title('Settings')

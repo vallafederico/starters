@@ -7,70 +7,14 @@ const options = {
   prefix: false,
   slug: true,
   seo: true,
-  groups: [{title: 'Project Brief', name: 'brief', defualt: true}],
+  groups: [{title: 'Project Brief', name: 'brief'}],
   icon: MdPages,
   fields: [
-    {
-      name: 'mainImage',
-      type: 'imageAlt',
-      group: 'content',
-    },
-    {
-      name: 'projectType',
-      group: 'brief',
-      type: 'array',
-      of: [{type: 'string'}],
-    },
-    {
-      name: 'role',
-      type: 'array',
-      group: 'brief',
-      of: [{type: 'string'}],
-    },
-    {
-      name: 'commission',
-      group: 'brief',
-      type: 'array',
-      of: [{type: 'string'}],
-    },
-    {
-      name: 'deliverables',
-      group: 'brief',
-      type: 'array',
-      of: [{type: 'string'}],
-    },
-    {
-      name: 'year',
-      type: 'number',
-      group: 'brief',
-    },
-    {
-      name: 'team',
-      group: 'content',
-      type: 'array',
-      of: [
-        {
-          name: 'member',
-          type: 'object',
-          icon: MdPerson,
-          preview: createPreview('name', 'role'),
-          fields: [
-            {
-              name: 'name',
-              type: 'string',
-            },
-            {
-              name: 'role',
-              type: 'string',
-            },
-            {
-              name: 'link',
-              type: 'url',
-            },
-          ],
-        },
-      ],
-    },
+    // {
+    //   name: 'mainImage',
+    //   type: 'imageAlt',
+    //   group: 'content',
+    // },
   ],
   body: false,
 }

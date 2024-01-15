@@ -11,6 +11,7 @@ export default defineCliConfig({
 })
 ```
 
+### .env
 ```md
 SANITY_STUDIO_ID="..."
 ```

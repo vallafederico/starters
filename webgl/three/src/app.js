@@ -3,11 +3,10 @@ import Viewport from "./modules/viewport";
 import { Gl } from "./gl/gl";
 
 class App {
+  time = 0;
   constructor() {
     this.body = document.querySelector("body");
     this.viewport = new Viewport();
-
-    this.time = 0;
 
     this.init();
   }
@@ -18,7 +17,7 @@ class App {
     this.gl = new Gl();
 
     this.initEvents();
-    // this.render()
+    this.render();
   }
 
   initEvents() {
@@ -33,6 +32,8 @@ class App {
 
   render() {
     this.time += 0.1;
+
+    this.gl?.render(this.time);
 
     window.requestAnimationFrame(this.render.bind(this));
   }

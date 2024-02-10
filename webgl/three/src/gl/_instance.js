@@ -1,7 +1,7 @@
 import { InstancedMesh, PlaneGeometry, InstancedBufferAttribute } from "three";
 import Material from "./mat/instance-raw";
 
-export default class extends InstancedMesh {
+export class Instance extends InstancedMesh {
   constructor(data = {}) {
     super();
 

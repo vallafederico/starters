@@ -29,7 +29,7 @@ export default class {
       target: new Vec3(0, 0, 0),
     });
 
-    this.render();
+    // this.render(); // do this from app
   }
 
   render(scroll = 0) {
@@ -38,7 +38,8 @@ export default class {
     this.controls?.update();
     this.scene?.render(this.time);
 
-    window.requestAnimationFrame(this.render.bind(this));
+    // this from app
+    // window.requestAnimationFrame(this.render.bind(this));
 
     this.renderer.render({
       scene: this.scene,

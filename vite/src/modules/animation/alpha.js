@@ -4,7 +4,7 @@ import { Observe } from "../../util/observe";
 // NEEDS CHECKING!
 
 export class Alpha extends Observe {
-  constructor({ element, anim, params, once = false }) {
+  constructor(element, { anim, params, once = false }) {
     super({
       element,
       config: {

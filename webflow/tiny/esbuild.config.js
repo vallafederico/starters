@@ -47,5 +47,5 @@ if (production) {
       servedir: CONFIG.SERVE_DIR,
       port: CONFIG.PORT,
     })
-    .then(() => console.log("http://localhost:8000/build/app.js"));
+    .then(() => console.log("http://localhost:8000/app.jss"));
 }

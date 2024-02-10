@@ -4,7 +4,7 @@ import { SplitText } from "gsap/SplitText";
 gsap.registerPlugin(SplitText);
 
 export class Text extends Observe {
-  constructor({ element, anim, params, once = false }) {
+  constructor(element, { anim, params, once = false }) {
     super({
       element,
       config: {
@@ -17,7 +17,7 @@ export class Text extends Observe {
     });
 
     this.anim = {
-      d: 1.2,
+      duration: 1.2,
       ease: "expo.out",
       delay: 0.1,
       stagger: {

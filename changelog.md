@@ -142,3 +142,15 @@
 # 10/01/24
 
 - [x] SANITY → new sanity boilerplate
+
+# 10/02/24
+
+- [x] VITE/WEBGL → add and save spinner code (from wiggle-bones)
+- [x] VITE → fix duration in Text item
+- [x] WEBFLOW TINY → fix esbuild initial script path `"http://localhost:8000/app.js"`
+- [x] VITE → add `afterRender()` and `raf()` to track (after to be called in render, raf to be called outside
+- [x] GIST:GLSL → add better point light
+- [x] WEBFLOW → add dual script handling
+- [x] VITE → make observer as in ilya2023 (make element not in object and required
+- [x] TWGL → add `texture-loader.js` class
+- [x] THREE → Save cubeTexture Implementation from demo-config

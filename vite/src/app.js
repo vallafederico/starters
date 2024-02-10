@@ -21,6 +21,9 @@ class App {
     this.dom = new Dom();
 
     this.initEvents();
+
+    /** RAF should come from gsap */
+    // gsap.ticker.add((t) => this.render(t));
     this.render();
   }
 
@@ -35,10 +38,11 @@ class App {
   }
 
   render(t) {
-    // this.time += 0.1;
-    this.scroll?.render(t);
+    this.scroll?.render(t); // if gsap * 1000
     this.dom?.render();
+    // this.gl?.render(this.scroll.y);
 
+    // remove if gsap
     window.requestAnimationFrame(this.render.bind(this));
   }
 

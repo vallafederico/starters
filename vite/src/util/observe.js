@@ -1,6 +1,6 @@
-import Emitter from "tiny-emitter";
+// import Emitter from "tiny-emitter";
 
-export class Observe extends Emitter {
+export class Observe {
   /**
    * Creates an instance of Observe.
    * @param {Object} options - The options object.
@@ -15,8 +15,8 @@ export class Observe extends Emitter {
    * @param {Function} [options.cb.in] - The function to execute when the element is in view.
    * @param {Function} [options.cb.out] - The function to execute when the element is out of view.
    */
-  constructor({ element, config, addClass, cb }) {
-    super();
+
+  constructor(element, { config, addClass, cb } = {}) {
     this.element = element;
     this.config = {
       root: config?.root || null,
@@ -72,13 +72,13 @@ export class Observe extends Emitter {
   stop() {
     this.in.unobserve(this.element);
     this.out.unobserve(this.element);
-    this.off("IN");
-    this.off("OUT");
+    // this.off("IN");
+    // this.off("OUT");
   }
 
   isIn() {
     // console.log("in");
-    this.emit("IN");
+    // this.emit("IN");
 
     if (this.cb?.in) this.cb.in();
     if (this.addClass) this.element.classList.add(this.addClass);
@@ -86,7 +86,7 @@ export class Observe extends Emitter {
 
   isOut() {
     // console.log("out");
-    this.emit("OUT");
+    // this.emit("OUT");
 
     if (this.cb?.out) this.cb.out();
     if (this.addClass) this.element.classList.remove(this.addClass);

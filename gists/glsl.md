@@ -5,7 +5,17 @@
 #### Point Light
 
 ```csharp
+// basic point light
 float ptl = abs(dot(normalize(vec3(1., 1., 1.)), v_normal));
+
+```
+
+```csharp
+// color point light
+vec3 p_pos = vec3(1., 1., 1.);
+vec3 p_col = vec3(1., 1., 1.);
+vec3 p_dir = normalize(p_pos - v_normal);
+vec3 plight = p_col * max(0., dot(p_dir, v_normal));
 
 ```
 
@@ -34,6 +44,23 @@ vec3 x = normalize( vec3(v_view.z, 0., -v_view.x));
 vec3 y = cross(v_view, x);
 vec2 fakeUv = vec2( dot(x, v_normal), dot(y, v_normal)) * .495 + .5;
 );
+
+```
+
+#### Cubemap Implementation
+
+```csharp
+
+uniform samplerCube u_cube;
+
+// main()
+vec3 R = reflect(vec3(0, 0, 8), normalize(v_coords.xyz));
+
+vec3 cube_map = 1. - textureCube(u_cube, v_coords.xyz).rgb;
+vec3 cube_map_r = textureCube(u_cube, R).rgb;
+float cube_map_l = (cube_map.r + cube_map.g + cube_map.b) / 3.;
+
+col *= 1. - cube_map_r * .1;
 
 ```
 

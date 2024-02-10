@@ -18,7 +18,7 @@ export class Dom {
       ...document.querySelectorAll(
         '[data-a="char"],[data-a="word"],[data-a="line"]'
       ),
-    ].map((el) => new Text({ element: el }));
+    ].map((el) => new Text(el, {}));
 
     this.start();
   }

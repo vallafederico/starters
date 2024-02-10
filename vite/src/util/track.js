@@ -47,7 +47,11 @@ export class Track extends Observe {
         this.config.bounds[1] // low2, high2
       )
     );
+
+    this.afterRender();
   }
+
+  afterRender() {}
 }
 
 // ---------

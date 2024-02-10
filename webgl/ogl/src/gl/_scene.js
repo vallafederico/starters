@@ -1,9 +1,11 @@
 import { Transform } from "ogl";
 
 import { Quad } from "./_quad.js";
+
+import { loadAssets } from "./util/loader.js";
 // import { Instance } from "./_instance.js";
 
-export default class extends Transform {
+export class Scene extends Transform {
   constructor(gl, data = {}) {
     super();
     this.gl = gl;
@@ -12,10 +14,13 @@ export default class extends Transform {
     this.create();
   }
 
-  create() {
+  async create() {
     /* Basic Quad */
     this.quad = new Quad(this.gl);
     this.quad.setParent(this);
+
+    // const ass = await loadAssets(this.gl);
+    // console.log(ass);
   }
 
   render(t) {

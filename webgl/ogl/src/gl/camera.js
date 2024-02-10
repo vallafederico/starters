@@ -1,6 +1,6 @@
 import { Camera } from "ogl";
 
-export default class extends Camera {
+export class Cam extends Camera {
   constructor(gl, { fov = 25 }) {
     super();
 

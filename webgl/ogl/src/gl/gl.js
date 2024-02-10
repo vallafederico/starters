@@ -1,35 +1,50 @@
 import { Renderer, Orbit, Vec3 } from "ogl";
-import Cam from "./_camera.js";
-import Scene from "./_scene.js";
+import { Cam } from "./camera.js";
+import { Scene } from "./_scene.js";
+
+export const params = {
+  clearColor: [0, 0, 0, 1],
+};
 
 export default class {
+  time = 0;
+  mouse = { x: 0, y: 0 };
   constructor() {
-    this.wrapper = document.querySelector("[data-gl='c']");
     this.vp = {
-      dpr: Math.min(window.devicePixelRatio, 2),
+      container: document.querySelector('[data-gl="c"]'),
+      w: window.innerWidth,
+      h: window.innerHeight,
+      aspect: () => {
+        return this.vp.w / this.vp.h;
+      },
+      dpr: () => {
+        return Math.min(window.devicePixelRatio, 2);
+      },
     };
 
-    this.renderer = new Renderer({ dpr: 2 });
-    this.gl = this.renderer.gl;
-    this.gl.clearColor(0, 0, 0, 1);
+    this.renderer = new Renderer({
+      dpr: this.vp.dpr(),
+      // antialias: true,
+      // alpha: true,
+    });
 
-    this.wrapper.appendChild(this.gl.canvas);
+    this.gl = this.renderer.gl;
+    this.gl.clearColor(...params.clearColor);
+
+    this.vp.container.appendChild(this.gl.canvas);
 
     this.camera = new Cam(this.gl, {});
     this.camera.position.set(0, 0, 5);
-
     // this.camera.lookAt([0, 0, 0]);
 
     this.scene = new Scene(this.gl);
     this.time = 0;
 
-    this.initEvents();
+    handleResize(this.vp.container, this.resize.bind(this));
 
     this.controls = new Orbit(this.camera, {
       target: new Vec3(0, 0, 0),
     });
-
-    // this.render(); // do this from app
   }
 
   render(scroll = 0) {
@@ -38,42 +53,32 @@ export default class {
     this.controls?.update();
     this.scene?.render(this.time);
 
-    // this from app
-    // window.requestAnimationFrame(this.render.bind(this));
-
     this.renderer.render({
       scene: this.scene,
       camera: this.camera,
     });
   }
 
-  initEvents() {
-    // resize
-    new ResizeObserver((entry) => this.resize(entry[0].contentRect)).observe(
-      this.wrapper
-    );
-    // mouse
-    this.mouse = { x: 0, y: 0 };
-  }
+  initEvents() {}
 
-  resize(entry) {
-    const cw = entry ? entry.width : this.wrapper.clientWidth;
-    const ch = entry ? entry.height : this.wrapper.clientHeight;
+  resize({ width, height }) {
+    this.vp.w = width;
+    this.vp.h = height;
 
-    this.vp.w = cw;
-    this.vp.h = ch;
-    this.vp.ratio = cw / ch;
-    this.vp.viewSize = this.camera.getViewSize(this.vp.ratio);
-    this.vp.viewRatio = this.vp.viewSize.w / this.vp.w;
-    // this.vp.scrollx = window.scrollX;
-    // this.vp.scrolly = window.scrollY;
+    // this.vp.viewSize = this.camera.getViewSize(this.vp.ratio);
+    // this.vp.viewRatio = this.vp.viewSize.w / this.vp.w;
 
     this.renderer.setSize(this.vp.w, this.vp.h);
+
     this.camera.perspective({
-      aspect: this.vp.ratio,
+      aspect: this.vp.aspect(),
     });
 
     this.scene.resize(this.vp);
-    // this.resizeChild();
   }
+}
+
+/** Utils */
+function handleResize(container, cb) {
+  new ResizeObserver((entry) => cb(entry[0].contentRect)).observe(container);
 }

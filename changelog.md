@@ -154,3 +154,12 @@
 - [x] VITE → make observer as in ilya2023 (make element not in object and required
 - [x] TWGL → add `texture-loader.js` class
 - [x] THREE → Save cubeTexture Implementation from demo-config
+
+# 17/04/24
+
+- [x] ASTRO → ts config and paths
+- [x] VITE → gui (make a function that automatically adds a whole object recursively and puts it into a folder - like p54 and post.js)
+- [x] VITE → add index.js in util
+- [x] GLSL → hex to vec
+- [x] VITE → fix text animation observer
+- [x] UTILS → gui.js

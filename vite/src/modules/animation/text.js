@@ -5,8 +5,8 @@ gsap.registerPlugin(SplitText);
 
 export class Text extends Observe {
   constructor(element, { anim, params, once = false }) {
-    super({
-      element,
+    super(element, {
+      // (*) TODOS check
       config: {
         root: null,
         margin: "0px",
@@ -39,7 +39,7 @@ export class Text extends Observe {
 
     this.once = once;
 
-    if (element.dataset.a === "lines") this.revertTo = this.element.textContent;
+    if (element.dataset.a === "line") this.revertTo = this.element.textContent;
 
     this.create(element);
     this.setOut();

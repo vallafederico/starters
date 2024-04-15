@@ -18,11 +18,14 @@ export class Observe {
 
   constructor(element, { config, addClass, cb } = {}) {
     this.element = element;
+
+    // (*) TODOS check
     this.config = {
-      root: config?.root || null,
-      margin: config?.margin || "10px",
-      threshold: config?.threshold || 0,
-      autoStart: config?.autoStart || false,
+      root: null,
+      margin: "10px",
+      threshold: 0,
+      autoStart: false,
+      ...config,
     };
 
     if (cb) this.cb = cb;

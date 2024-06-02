@@ -1,8 +1,5 @@
-import Emitter from "tiny-emitter";
-
-export class Observe extends Emitter {
+export class Observe {
   constructor(element, config = {}, autoinit = true) {
-    super();
     this.element = element;
     this.config = {
       root: config.root || null,
@@ -20,7 +17,7 @@ export class Observe extends Emitter {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             console.log("in");
-            this.emit("IN");
+            // this.emit("IN");
           }
         });
       },
@@ -36,7 +33,7 @@ export class Observe extends Emitter {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) {
             console.log("out");
-            this.emit("OUT");
+            // this.emit("OUT");
           }
         });
       },

@@ -1,5 +1,5 @@
-import { loadModel } from "./load-model";
-import { loadTexture } from "./load-texture";
+import loadModel from "./model-loader";
+import loadTexture from "./texture-loader";
 import { assets as file } from "../assets";
 
 export async function loadAssets(opt = null) {

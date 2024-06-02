@@ -1,5 +1,3 @@
-// import Emitter from "tiny-emitter";
-
 export class Observe {
   /**
    * Creates an instance of Observe.

@@ -1,4 +1,4 @@
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis";
 import { easeOutExpo } from "../util/easings.js";
 
 const lenisDefault = (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t));

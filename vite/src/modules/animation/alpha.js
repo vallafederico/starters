@@ -1,4 +1,4 @@
-import gsap from "gsap";
+import gsap from "../../gsap";
 import { Observe } from "../../util/observe";
 
 // NEEDS CHECKING!

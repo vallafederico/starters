@@ -16,6 +16,7 @@ export class Scene extends Transform {
 
   async create() {
     /* Basic Quad */
+
     this.quad = new Quad(this.gl);
     this.quad.setParent(this);
 

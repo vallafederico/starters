@@ -1,10 +1,8 @@
 import { Observe } from "../../util/observe";
-import { gsap } from "gsap";
-import { SplitText } from "gsap/SplitText";
-gsap.registerPlugin(SplitText);
+import gsap, { SplitText } from "../../gsap";
 
 export class Text extends Observe {
-  constructor(element, { anim, params, once = false }) {
+  constructor(element, { anim = {}, params = {}, once = false } = {}) {
     super(element, {
       // (*) TODOS check
       config: {

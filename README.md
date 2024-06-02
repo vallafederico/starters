@@ -34,7 +34,7 @@ degit vallafederico/starters/vite/src
 ```
 
 ```console
-pnpm install @studio-freight/lenis @unseenco/taxi tiny-emitter gsap@npm:@gsap/shockingl
+pnpm install lenis @unseenco/taxi lil-gui gsap@npm:@gsap/shockingly
 ```
 
 ### Generators
@@ -58,7 +58,7 @@ degit vallafederico/starters/webgl/three/src/gl;
 ```
 
 ```console
-pnpm install tiny-emitter three
+pnpm install three
 ```
 
 #### Ogl
@@ -72,7 +72,7 @@ degit vallafederico/starters/webgl/ogl/src/gl
 ```
 
 ```console
-pnpm install tiny-emitter ogl
+pnpm install ogl
 ```
 
 #### Twgl

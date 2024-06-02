@@ -163,3 +163,17 @@
 - [x] GLSL → hex to vec
 - [x] VITE → fix text animation observer
 - [x] UTILS → gui.js
+
+# 02/06/24
+
+- [x] VITE → swap `dom.js` generator function for compact and real cool version from PN
+- [x] VITE → use gsap.js to trigger raf and import things + utils
+- [x] VITE → kill tiny emitter
+- [x] VITE → fix imports
+  - [x] import lenis properly and bummp to new version
+  - [x] fix notes in the readme
+  - [x] add mitt and lil-gui
+- [x] WEBGL (ALL) → cleanup webgl clientRect(s)
+- [x] UTILS | Hey → migrate to static class (to be checked)
+- [x] THREE → fails both importing assets AND importing the functions to load things
+- [x] WEBGL (ALL) → clientrectgl issue to `const bounds = clientRect(element)`

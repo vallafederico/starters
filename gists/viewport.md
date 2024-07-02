@@ -41,3 +41,24 @@ window.addEventListener("blur", () => {
   console.log("blur");
 });
 ```
+
+```js
+export function viewportUnits() {
+  document.documentElement.style.setProperty(
+    "--vw",
+    document.documentElement.clientWidth * 0.01 + "px"
+  );
+
+  document.documentElement.style.setProperty(
+    "--dvh",
+    window.innerHeight * 0.01 + "px"
+  );
+
+  document.documentElement.style.setProperty(
+    "--svh",
+    document.documentElement.clientHeight * 0.01 + "px"
+  );
+
+  document.documentElement.style.setProperty("--lvh", "1vh");
+}
+```

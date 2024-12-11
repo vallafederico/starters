@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/app.js"],
+  "sourcesContent": ["class App {\n  constructor() {\n    console.log(\"App live\");\n  }\n}\n\nwindow.add = new App();\n\n// <!--Double script for localhost vs cdn-->\n// <script>\n// \tfunction onErrorLoader(){\n// \tconst script = document.createElement(\"script\");\n// \tscript.src = \"...\"\n// \tscript.defer=\"true\";\n// \tdocument.head.appendChild(script);\n// \t}\n// </script>\n\n// <script defer\n// \tsrc=\"http://localhost:8000/app.js\"\n// \tonerror=\"onErrorLoader()\"\n// ></script>\n"],
+  "mappings": ";;AAAA,MAAM,MAAN,MAAU;AAAA,IACR,cAAc;AACZ,cAAQ,IAAI,UAAU;AAAA,IACxB;AAAA,EACF;AAEA,SAAO,MAAM,IAAI,IAAI;",
+  "names": []
+}

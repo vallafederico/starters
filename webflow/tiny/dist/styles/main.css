@@ -1,0 +1,56 @@
+/* src/styles/variables.css */
+:root {
+  --duration: 1.2s;
+  --easeOut: cubic-bezier(0.77, 0, 0.175, 1);
+  --easeOutBack: cubic-bezier(0.175, 0, 0.77, 1);
+  --easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* src/styles/lenis.css */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* src/styles/main.css */
+* {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+:root {
+  overscroll-behavior: none;
+  overflow-x: hidden;
+}
+@media only screen and (min-width: 767px) {
+  [data-hide=desktop] {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  :root {
+    --text-h1: 3.2rem;
+  }
+  [data-hide=mobile] {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */

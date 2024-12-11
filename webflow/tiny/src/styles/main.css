@@ -1,0 +1,39 @@
+@import "variables.css";
+@import "lenis.css";
+
+* {
+  box-sizing: border-box;
+
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+:root {
+  overscroll-behavior: none;
+  overflow-x: hidden;
+}
+
+@media only screen and (min-width: 767px) {
+  /* desktop */
+  [data-hide="desktop"] {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /* mobile */
+  :root {
+    --text-h1: 3.2rem;
+  }
+
+  [data-hide="mobile"] {
+    display: none;
+  }
+}

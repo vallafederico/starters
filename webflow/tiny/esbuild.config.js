@@ -7,7 +7,7 @@ const production = env === "production";
 
 const CONFIG = {
   PORT: 8000,
-  ENTRY: ["src/app.js"],
+  ENTRY: ["src/app.js", "src/styles/main.css", "src/styles/out.css"],
   SERVE_DIR: "dist",
   OUT_DIR: "dist",
   BUILD_DIR: "build",
@@ -47,5 +47,5 @@ if (production) {
       servedir: CONFIG.SERVE_DIR,
       port: CONFIG.PORT,
     })
-    .then(() => console.log("http://localhost:8000/app.jss"));
+    .then(() => console.log("http://localhost:8000/"));
 }
